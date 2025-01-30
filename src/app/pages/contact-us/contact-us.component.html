@@ -1,0 +1,141 @@
+<app-navbar></app-navbar>
+<section class="relative w-full h-[300px] bg-gray-900 text-white">
+  <!-- Imagen de fondo -->
+  <div class="absolute inset-0">
+    <img src="assets/img/Print-MPS-DEST-02.jpg" alt="Machu Picchu" class="w-full h-full object-cover opacity-50">
+  </div>
+  <!-- Contenido -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+    <h1 class="text-lg md:text-lg ">
+      RESERVA CON CONFIANZA
+    </h1>
+    <p class="mt-4 text-2xl md:text-5xl tracking-wide">
+      CONTACTANOS
+    </p>
+
+    <!-- Chat Icon -->
+    <button class="fixed bottom-6 right-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition">
+      💬
+    </button>
+  </div>
+</section>
+
+<!-- Sección del formulario -->
+<div class="container mx-auto py-10 px-4">
+  <div class="bg-white  shadow-lg rounded-lg p-6 md:p-10">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <!-- Nombre completo -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <input
+          type="text"
+          class="border-[1px] w-full border-[#5e5e5e] rounded-lg shadow-sm focus:ring-[#034873] focus:border-[#034873] p-2"
+          placeholder="First And Last Name"
+          formControlName="name"
+        />
+        <div class="flex gap-1">
+          <app-phone-code-selector (phoneCodeSelected)="onPhoneCodeSelected($event)" ></app-phone-code-selector>
+          <input
+            type="text"
+            class="border-[1px] w-full border-[#5e5e5e] rounded-lg shadow-sm focus:ring-[#034873] focus:border-[#034873] p-2"
+            placeholder="Phone / Whatsapp"
+            formControlName="phone"
+          />
+        </div>
+        <input
+          type="email"
+          class="border-[1px] w-full border-[#5e5e5e] rounded-lg shadow-sm focus:ring-[#034873] focus:border-[#034873] p-2"
+          placeholder="E-mail"
+          formControlName="email"
+        />
+      </div>
+
+      <!-- ¿Eres una agencia de viajes? -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-semibold mb-2">Are you a travel agency?</label>
+        <div class="flex items-center gap-4">
+          <label class="flex items-center">
+            <input type="radio" formControlName="travel_agency" value="yes" class="mr-2" /> Yes
+          </label>
+          <label class="flex items-center">
+            <input type="radio" formControlName="travel_agency" value="no" class="mr-2" /> No
+          </label>
+        </div>
+      </div>
+
+      <!-- Categoría de hotel -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <select
+          class="border-[1px] w-full border-[#5e5e5e] rounded-lg shadow-sm focus:ring-[#034873] focus:border-[#034873] p-2"
+          formControlName="hotel_category"
+        >
+          <option>Hotel category</option>
+          <option value="3 stars">3 stars</option>
+          <option value="4 stars">4 stars</option>
+          <option value="5 stars">5 stars</option>
+        </select>
+        <input
+          type="number"
+          class="border-[1px] w-full border-[#5e5e5e] rounded-lg shadow-sm focus:ring-[#034873] focus:border-[#034873] p-2"
+          placeholder="Price"
+          formControlName="price"
+        />
+      </div>
+
+      <!-- Destino y fechas -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <input
+          type="text"
+          class="border-[1px] w-full border-[#5e5e5e] rounded-lg shadow-sm focus:ring-[#034873] focus:border-[#034873] p-2"
+          placeholder="Destination"
+          formControlName="destination"
+        />
+        <input
+          type="date"
+          class="border-[1px] w-full border-[#5e5e5e] rounded-lg shadow-sm focus:ring-[#034873] focus:border-[#034873] p-2"
+          formControlName="date_start"
+        />
+        <input
+          type="date"
+          class="border-[1px] w-full border-[#5e5e5e] rounded-lg shadow-sm focus:ring-[#034873] focus:border-[#034873] p-2"
+          formControlName="date_end"
+        />
+      </div>
+
+      <!-- Mensaje -->
+      <div class="mb-4">
+    <textarea
+      class="border-[1px] w-full border-[#5e5e5e] rounded-lg shadow-sm focus:ring-[#034873] focus:border-[#034873] p-2"
+      rows="4"
+      placeholder="Write your message"
+      formControlName="message"
+    ></textarea>
+      </div>
+
+      <!--   Políticas -->
+      <!--
+      <div class="mb-6">
+        <label class="block text-gray-700 mb-2">
+          <input type="checkbox" formControlName="acceptPolicy" class="mr-2" />
+          I have read and accept the personal
+          <a href="#" class="text-red-500 underline">Data protection and treatment policy</a>
+        </label>
+        <label class="block text-gray-700">
+          <input type="checkbox" formControlName="allowAdvertising" class="mr-2" />
+          I authorize the use of my information for advertising.
+        </label>
+      </div>
+ -->
+      <!-- Botón de enviar -->
+      <div class="text-center">
+        <button
+          type="submit"
+          class="bg-[#FFA600] text-white px-6 py-2 rounded-lg shadow-md hover:bg-[#FFA600] transition duration-300"
+          [disabled]="contactForm.invalid"
+        >
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>
