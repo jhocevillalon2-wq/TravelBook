@@ -1,0 +1,29 @@
+/* Estilo para animar el menú desplegable */
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+.translate-x-0 {
+  transform: translateX(0);
+}
+
+.-translate-x-full {
+  transform: translateX(-100%);
+}
+
+/* Estilos para el navbar */
+.transition-opacity {
+  transition: opacity 0.5s ease-in-out, pointer-events 0.5s ease-in-out;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

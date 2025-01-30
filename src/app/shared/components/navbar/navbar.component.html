@@ -1,0 +1,43 @@
+<nav
+  class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 transition-all duration-500"
+  [ngClass]="navbarClasses"
+>
+  <div class="flex items-center">
+    <!-- Ícono para abrir el menú -->
+    <i
+      class="fa-solid fa-bars text-[40px] text-[#FFFFFF] cursor-pointer"
+      (click)="toggleMenu()"
+    ></i>
+    <h1 [routerLink]="['/home']" class="text-xl font-bold ml-4">Infinity Luxury Peru</h1>
+  </div>
+  <ul class="hidden md:flex gap-10 items-center text-sm">
+    <li><a [routerLink]="['/home']" class="hover:underline">Tours</a></li>
+    <li><a [routerLink]="['/packages']" class="hover:underline">Paquetes</a></li>
+    <li><a [routerLink]="['/home']" class="hover:underline">Traslados</a></li>
+    <li><a [routerLink]="['/home']" class="hover:underline">Quiénes somos</a></li>
+    <li><a [routerLink]="['/home']" class="hover:underline">Blog</a></li>
+    <li><a [routerLink]="['/contact-us']" class="hover:underline">Contáctanos</a></li>
+  </ul>
+  <button class="hidden md:block bg-[#FFA600] text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors">
+    Planea tu viaje
+  </button>
+
+  <!-- Menú desplegable -->
+  <div
+    class="fixed top-0 left-0 w-[500px] h-full bg-white z-40 flex flex-col px-6 py-4 transition-transform"
+    [ngClass]="{ 'translate-x-0': menuOpen, '-translate-x-full': !menuOpen }"
+  >
+    <button
+      class="text-black text-2xl mb-4 self-end"
+      (click)="toggleMenu()"
+    >
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Tours</a>
+    <a [routerLink]="['/packages']" class="text-black py-2 border-b border-gray-600">Paquetes</a>
+    <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Traslados</a>
+    <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Quiénes somos</a>
+    <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Blog</a>
+    <a [routerLink]="['/contact-us']" class="text-black py-2 border-b border-gray-600">Contáctanos</a>
+  </div>
+</nav>

@@ -1,0 +1,35 @@
+<div class="relative overflow-hidden">
+  <!-- Contenedor de las tarjetas -->
+  <div
+    class="flex transition-transform duration-500"
+    [style.transform]="'translateX(-' + currentSlide * 100 + '%)'">
+    <div *ngFor="let card of cards" class="flex-none w-full md:w-1/2 h-screen relative group">
+      <img [src]="card.image" alt="{{ card.title }}" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center p-8 group-hover:bg-opacity-60 transition">
+        <h2 class="text-white text-3xl md:text-4xl font-bold mb-4">{{ card.title }}</h2>
+        <p class="text-gray-200 text-lg mb-6">{{ card.description }}</p>
+        <button class="bg-purple-600 hover:bg-purple-700 text-white py-2 px-6 rounded transition">
+          {{ card.buttonText }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <button
+    class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full"
+    (click)="prevSlide()"
+    [disabled]="currentSlide === 0"
+    [class.cursor-not-allowed]="currentSlide === 0"
+    [class.opacity-50]="currentSlide === 0">
+    &#10094; <!-- Flecha izquierda -->
+  </button>
+  <button
+    class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full"
+    (click)="nextSlide()"
+    [disabled]="currentSlide >= (cards.length/2)-1"
+    [class.cursor-not-allowed]="currentSlide >= (cards.length/2)-1"
+    [class.opacity-50]="currentSlide >= (cards.length/2)-1">
+    &#10095; <!-- Flecha derecha -->
+  </button>
+</div>

@@ -1,0 +1,22 @@
+/* Configuración básica */
+.flex {
+  display: flex;
+}
+.transition-transform {
+  transition: transform 0.5s ease-in-out;
+}
+.flex-none {
+  flex: none;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}

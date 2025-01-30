@@ -1,0 +1,15 @@
+h2 {
+  color: #333;
+}
+
+i.fa-star, i.fa-star-half-alt {
+  color: #FFC107;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,32 @@
+<div class="bg-white py-16 px-6">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
+    INFINITY LUXURY PERU: TOURS AND TRIP PACKAGES IN PERU
+  </h2>
+  <div class="text-center mb-8">
+    <div class="text-yellow-500 text-2xl flex justify-center items-center gap-1">
+      <span>5</span>
+      <div class="flex">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+          <i class="fas fa-star"></i>
+        </ng-container>
+      </div>
+    </div>
+    <p class="text-gray-600">Based on {{ reviews.length }} reviews</p>
+  </div>
+
+  <!-- Carrusel de comentarios -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div *ngFor="let review of reviews" class="p-4 border rounded-lg shadow-sm bg-gray-50">
+      <div class="flex items-center gap-2 mb-4">
+        <h4 class="text-lg font-semibold text-gray-800">{{ review.name }}</h4>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">{{ review.comment }}</p>
+      <a href="#" class="text-purple-500 text-sm font-semibold">Read More »</a>
+      <div class="flex mt-2 text-yellow-500">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+          <i class="fas" [class.fa-star]="i < review.rating" [class.fa-star-half-alt]="i === review.rating - 0.5"></i>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

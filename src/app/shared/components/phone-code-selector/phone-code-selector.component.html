@@ -1,0 +1,13 @@
+<div class="w-[45px]">
+  <select
+    id="phoneCode"
+    class="w-[45px] h-[45px] rounded-lg border-[#5e5e5e] border-[1px]"
+    [(ngModel)]="selectedPhoneCode"
+    (change)="onPhoneCodeChange()"
+  >
+    <option value="" disabled selected>#</option>
+    <option *ngFor="let country of phoneCodes" [value]="country.phoneCode">
+      {{ country.flagEmoji }} {{ country.name }} ({{ country.phoneCode }})
+    </option>
+  </select>
+</div>
