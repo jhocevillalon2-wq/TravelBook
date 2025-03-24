@@ -8,13 +8,13 @@
       class="fa-solid fa-bars text-[40px] text-[#FFFFFF] cursor-pointer"
       (click)="toggleMenu()"
     ></i>
-    <h1 [routerLink]="['/home']" class="text-xl font-bold ml-4">Infinity Luxury Peru</h1>
+    <h1 [routerLink]="['/home']" class="h-16 font-bold ml-4 "><img src="assets/img/logo_travel_1-removebg-preview.png" class="h-full" alt="home"></h1>
   </div>
   <ul class="hidden md:flex gap-10 items-center text-sm">
     <li><a [routerLink]="['/home']" class="hover:underline">Tours</a></li>
     <li><a [routerLink]="['/packages']" class="hover:underline">Paquetes</a></li>
     <li><a [routerLink]="['/home']" class="hover:underline">Traslados</a></li>
-    <li><a [routerLink]="['/home']" class="hover:underline">Quiénes somos</a></li>
+    <li><a [routerLink]="['/about-us']" class="hover:underline">Quiénes somos</a></li>
     <li><a [routerLink]="['/home']" class="hover:underline">Blog</a></li>
     <li><a [routerLink]="['/contact-us']" class="hover:underline">Contáctanos</a></li>
   </ul>
@@ -36,7 +36,7 @@
     <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Tours</a>
     <a [routerLink]="['/packages']" class="text-black py-2 border-b border-gray-600">Paquetes</a>
     <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Traslados</a>
-    <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Quiénes somos</a>
+    <a [routerLink]="['/about-us']" class="text-black py-2 border-b border-gray-600">Quiénes somos</a>
     <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Blog</a>
     <a [routerLink]="['/contact-us']" class="text-black py-2 border-b border-gray-600">Contáctanos</a>
   </div>
