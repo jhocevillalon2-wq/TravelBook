@@ -25,7 +25,7 @@ export class NavbarComponent {
     if (this.enableScrollEffect) {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      if (scrollTop > 50) {
+      if (scrollTop > 20) {
         // Navbar visible al hacer scroll
         this.scrolled = true;
         this.navbarClasses =

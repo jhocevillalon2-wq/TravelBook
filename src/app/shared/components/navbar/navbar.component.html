@@ -1,14 +1,18 @@
 <nav
-  class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 transition-all duration-500"
+  class="fixed top-0 left-0 w-full z-50 flex items-center justify-between transition-all p-4 duration-500"
   [ngClass]="navbarClasses"
 >
-  <div class="flex items-center">
+  <div class="flex items-center justify-between w-full md:w-1/4">
+    <h1 [routerLink]="['/home']" class="h-full font-bold ml-0 ">
+      <img src="assets/img/logo_travel_book_peru.webp" class="h-[5vh] md:h-[10vh]" alt="home">
+    </h1>
     <!-- Ícono para abrir el menú -->
-    <i
-      class="fa-solid fa-bars text-[40px] text-[#FFFFFF] cursor-pointer"
-      (click)="toggleMenu()"
-    ></i>
-    <h1 [routerLink]="['/home']" class="h-16 font-bold ml-4 "><img src="assets/img/logo_travel_1-removebg-preview.png" class="h-full" alt="home"></h1>
+    <div class="visible md:hidden">
+      <i
+        class=" fa-solid fa-bars text-[20px] text-[#FFFFFF] cursor-pointer"
+        (click)="toggleMenu()"
+      ></i>
+    </div>
   </div>
   <ul class="hidden md:flex gap-10 items-center text-sm">
     <li><a [routerLink]="['/home']" class="hover:underline">Tours</a></li>
@@ -24,7 +28,7 @@
 
   <!-- Menú desplegable -->
   <div
-    class="fixed top-0 left-0 w-[500px] h-full bg-white z-40 flex flex-col px-6 py-4 transition-transform"
+    class="fixed top-0 left-0 w-[400px] h-full bg-white z-40 flex flex-col px-6 py-4 transition-transform"
     [ngClass]="{ 'translate-x-0': menuOpen, '-translate-x-full': !menuOpen }"
   >
     <button
