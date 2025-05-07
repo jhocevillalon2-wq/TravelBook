@@ -15,12 +15,16 @@
     </div>
   </div>
   <ul class="hidden md:flex gap-10 items-center text-sm">
-    <li><a [routerLink]="['/home']" class="hover:underline">Tours</a></li>
+    <li><a [routerLink]="['/tours']" class="hover:underline">Tours</a></li>
     <li><a [routerLink]="['/packages']" class="hover:underline">Paquetes</a></li>
-    <li><a [routerLink]="['/home']" class="hover:underline">Traslados</a></li>
+    <li><a [routerLink]="['/traslados']" class="hover:underline">Traslados</a></li>
     <li><a [routerLink]="['/about-us']" class="hover:underline">Quiénes somos</a></li>
-    <li><a [routerLink]="['/home']" class="hover:underline">Blog</a></li>
+    <li><a [routerLink]="['/blog']" class="hover:underline">Blog</a></li>
     <li><a [routerLink]="['/contact-us']" class="hover:underline">Contáctanos</a></li>
+    <div class="flex flex-col items-center gap-2">
+      <span (click)="changeLanguage('es')" class="cursor-pointer">ESP</span>
+      <span (click)="changeLanguage('en')" class="cursor-pointer">ENG</span>
+    </div>
   </ul>
   <button class="hidden md:block bg-[#FFA600] text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors">
     Planea tu viaje
@@ -37,11 +41,15 @@
     >
       <i class="fa-solid fa-xmark"></i>
     </button>
-    <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Tours</a>
+    <a [routerLink]="['/tours']" class="text-black py-2 border-b border-gray-600">Tours</a>
     <a [routerLink]="['/packages']" class="text-black py-2 border-b border-gray-600">Paquetes</a>
-    <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Traslados</a>
+    <a [routerLink]="['/traslados']" class="text-black py-2 border-b border-gray-600">Traslados</a>
     <a [routerLink]="['/about-us']" class="text-black py-2 border-b border-gray-600">Quiénes somos</a>
-    <a [routerLink]="['/home']" class="text-black py-2 border-b border-gray-600">Blog</a>
+    <a [routerLink]="['/blog']" class="text-black py-2 border-b border-gray-600">Blog</a>
     <a [routerLink]="['/contact-us']" class="text-black py-2 border-b border-gray-600">Contáctanos</a>
+    <div class="flex flex-row items-center gap-2 pt-4">
+      <span (click)="changeLanguage('es'); toggleMenu()" class="cursor-pointer text-white">ESP</span>
+      <span (click)="changeLanguage('en'); toggleMenu()" class="cursor-pointer text-white">ENG</span>
+    </div>
   </div>
 </nav>

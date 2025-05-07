@@ -1,0 +1,36 @@
+{
+  "ABOUT_US": {
+    "title": "INFINITY LUXURY PERU",
+    "subtitle": "SOBRE NOSOTROS",
+    "chat": "💬",
+    "section": {
+      "heading": "Travel <span class='text-yellow-500 italic font-serif'>Book</span>",
+      "paragraph": "En Travel Book transformamos tus sueños de viaje en realidad. Nos especializamos en crear experiencias de lujo personalizadas que reflejan tus emociones y deseos. Desde los majestuosos Andes hasta la maravilla eterna de Machu Picchu, diseñamos itinerarios únicos que capturan la esencia de la cultura, historia y belleza natural del Perú. ¿Qué nos hace diferentes? No solo es nuestra atención al detalle ni nuestros itinerarios cuidadosamente seleccionados. Es la pasión y dedicación que ponemos en cada aventura. Nuestro equipo de expertos está disponible las 24 horas, los 7 días de la semana, para garantizar que cada momento de tu viaje sea perfecto e inolvidable. Ya sea explorando Cusco con guías expertos o disfrutando de la elegancia de hoteles boutique y transporte privado, priorizamos tu comodidad, seguridad y conexión con la riqueza del patrimonio peruano."
+    }
+  },
+  "BLOG": {
+
+  },
+  "CONTACT_US": {
+
+  },
+  "HOME": {
+
+  },
+  "PACKAGES": {
+    "brand": "TRAVEL BOOK PERU",
+    "title": "PAQUETES",
+    "card": {
+      "days": "5 días",
+      "title": "5 DÍAS EN PERÚ: VIVE LO MEJOR DE PERÚ",
+      "from": "DESDE",
+      "price": "$USD 663"
+    }
+  },
+  "TOURS": {
+
+  },
+  "TRASLADOS":{
+
+  }
+}
