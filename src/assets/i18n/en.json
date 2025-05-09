@@ -236,23 +236,10 @@
           "FIN DE LOS SERVICIOS"
         ],
         "images": [
-          {
-            "alt": "Cusco Colorido",
-            "src": "assets/img/cusco-colorido-1.jpg",
-            "width": 800
-          },
-          {
-            "alt": "Montaña de 7 Colores",
-            "src": "assets/img/montana-7-colores.jpg",
-            "width": 800
-          },
-          {
-            "alt": "Machu Picchu",
-            "src": "assets/img/machu-picchu.jpg",
-            "width": 800
-          }
-        ]
-      },
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ]      },
       {
         "id": "3",
         "price": "Consultar",
@@ -327,26 +314,9 @@
           "Recomendaciones: Zapatos de trekking, impermeable, cantimplora, protector solar, gorro para frío y con visera, guantes, ropa abrigadora."
         ],
         "images": [
-          {
-            "alt": "Vista de Machu Picchu",
-            "src": "/assets/images/machu-picchu.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Montaña 7 Colores",
-            "src": "/assets/images/montana-7-colores.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Valle Sagrado de los Incas",
-            "src": "/assets/images/valle-sagrado.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Centro de Cusco",
-            "src": "/assets/images/cusco-city.jpg",
-            "width": 1200
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ]
       },
       {
@@ -411,26 +381,9 @@
           "Se recomienda llevar cámara fotográfica y agua."
         ],
         "images": [
-          {
-            "alt": "Vista de Machu Picchu",
-            "src": "/assets/images/machu-picchu.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Valle Sagrado de los Incas",
-            "src": "/assets/images/valle-sagrado.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Centro de Cusco",
-            "src": "/assets/images/cusco-city.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Aguas Calientes",
-            "src": "/assets/images/aguas-calientes.jpg",
-            "width": 1200
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ]
       },
       {
@@ -500,28 +453,10 @@
           "Se recomienda llevar cámara fotográfica y agua."
         ],
         "images": [
-          {
-            "alt": "Vista de Machu Picchu",
-            "src": "/assets/images/machu-picchu.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Valle Sagrado de los Incas",
-            "src": "/assets/images/valle-sagrado.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Centro de Cusco",
-            "src": "/assets/images/cusco-city.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Aguas Calientes",
-            "src": "/assets/images/aguas-calientes.jpg",
-            "width": 1200
-          }
-        ]
-      },
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ]      },
       {
         "id": "6",
         "price": "Consultar",
@@ -588,16 +523,9 @@
           "No incluye entradas a la Catedral"
         ],
         "images": [
-          {
-            "alt": "Machu Picchu",
-            "src": "path/to/machu_picchu_image.jpg",
-            "width": 800
-          },
-          {
-            "alt": "Valle Sagrado",
-            "src": "path/to/valle_sagrado_image.jpg",
-            "width": 800
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ]
       },
       {
@@ -678,21 +606,9 @@
           "Se recomienda llevar ropa adecuada para caminatas y el clima de montaña"
         ],
         "images": [
-          {
-            "alt": "Machu Picchu",
-            "src": "path/to/machu_picchu_image.jpg",
-            "width": 800
-          },
-          {
-            "alt": "Montaña 7 Colores",
-            "src": "path/to/montana_7_colores_image.jpg",
-            "width": 800
-          },
-          {
-            "alt": "Valle Sagrado",
-            "src": "path/to/valle_sagrado_image.jpg",
-            "width": 800
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ]
       },
       {
@@ -755,16 +671,9 @@
           "Para la opción del Tren Vistadome, se debe confirmar con anticipación."
         ],
         "images": [
-          {
-            "alt": "Vista de Machu Picchu",
-            "src": "https://example.com/images/machu_picchu.jpg",
-            "width": 600
-          },
-          {
-            "alt": "Valle Sagrado",
-            "src": "https://example.com/images/valle_sagrado.jpg",
-            "width": 600
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ]
       },
       {
@@ -833,23 +742,519 @@
           "Para la opción del Tren Vistadome, se debe confirmar con anticipación.",
           "Recomendaciones para el Tour Montaña 7 Colores: tipo de tour Aventura, dificultad media. Se recomienda llevar zapato de trekking, impermeable, cantinflora, protector solar, gorro para frío y con visera, guantes, y ropa abrigadora."
         ],
+
         "images": [
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ],
+        "hotelPricing":[
           {
-            "alt": "Machu Picchu",
-            "src": "https://example.com/images/machu_picchu.jpg",
-            "width": 600
+            "hotelName":"San Francisco Pardo",
+            "category":"3*",
+            "prices":{
+              "peruvian":{
+                "swb":"504",
+                "dwb":"444",
+                "tpl":"435",
+                "chd":"357"
+              },
+              "foreign":{
+                "swb":"551",
+                "dwb":"491",
+                "tpl":"482",
+                "chd":"379"
+              }
+            }
           },
           {
-            "alt": "Montaña 7 Colores",
-            "src": "https://example.com/images/montana_7_colores.jpg",
-            "width": 600
+            "hotelName":"Chinkana del Inka",
+            "category":"2*",
+            "prices":{
+              "peruvian":{
+                "swb":"534",
+                "dwb":"457",
+                "tpl":"450",
+                "chd":"372"
+              },
+              "foreign":{
+                "swb":"581",
+                "dwb":"504",
+                "tpl":"496",
+                "chd":"394"
+              }
+            }
           },
           {
-            "alt": "Laguna Humantay",
-            "src": "https://example.com/images/laguna_humantay.jpg",
-            "width": 600
+            "hotelName":"Hotel Turiwasi",
+            "category":"3*",
+            "prices":{
+              "peruvian":{
+                "swb":"531",
+                "dwb":"464",
+                "tpl":"460",
+                "chd":"382"
+              },
+              "foreign":{
+                "swb":"577",
+                "dwb":"511",
+                "tpl":"507",
+                "chd":"405"
+              }
+            }
+          },
+          {
+            "hotelName": "Hotel Warari",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "562",
+                "dwb": "468",
+                "tpl": "457",
+                "chd": "379"
+              },
+              "foreign": {
+                "swb": "608",
+                "dwb": "515",
+                "tpl": "504",
+                "chd": "402"
+              }
+            }
+          },
+          {
+            "hotelName": "Emperador Plaza",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "566",
+                "dwb": "475",
+                "tpl": "462",
+                "chd": "384"
+              },
+              "foreign": {
+                "swb": "613",
+                "dwb": "522",
+                "tpl": "508",
+                "chd": "406"
+              }
+            }
+          },
+          {
+            "hotelName": "Hotel Inkarri",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "522",
+                "dwb": "448",
+                "tpl": "448",
+                "chd": "370"
+              },
+              "foreign": {
+                "swb": "626",
+                "dwb": "522",
+                "tpl": "519",
+                "chd": "416"
+              }
+            }
+          },
+          {
+            "hotelName": "Hotel Imperial",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "562",
+                "dwb": "468",
+                "tpl": "457",
+                "chd": "379"
+              },
+              "foreign": {
+                "swb": "608",
+                "dwb": "515",
+                "tpl": "504",
+                "chd": "402"
+              }
+            }
+          },
+          {
+            "hotelName": "Hotel Prisma",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "620",
+                "dwb": "499",
+                "tpl": "473",
+                "chd": "395"
+              },
+              "foreign": {
+                "swb": "631",
+                "dwb": "526",
+                "tpl": "504",
+                "chd": "402"
+              }
+            }
+          },
+          {
+            "hotelName": "Hotel El Puma",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "571",
+                "dwb": "475",
+                "tpl": "466",
+                "chd": "388"
+              },
+              "foreign": {
+                "swb": "617",
+                "dwb": "522",
+                "tpl": "513",
+                "chd": "411"
+              }
+            }
+          },
+          {
+            "hotelName": "San Francisco Plaza",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "575",
+                "dwb": "479",
+                "tpl": "460",
+                "chd": "382"
+              },
+              "foreign": {
+                "swb": "622",
+                "dwb": "526",
+                "tpl": "507",
+                "chd": "405"
+              }
+            }
+          },
+          {
+            "hotelName": "Sueños del Inka",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "673",
+                "dwb": "526",
+                "tpl": "517",
+                "chd": "439"
+              },
+              "foreign": {
+                "swb": "675",
+                "dwb": "548",
+                "tpl": "541",
+                "chd": "439"
+              }
+            }
+          },
+          {
+            "hotelName": "Terra Andina",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "651",
+                "dwb": "513",
+                "tpl": "516",
+                "chd": "439"
+              },
+              "foreign": {
+                "swb": "697",
+                "dwb": "559",
+                "tpl": "563",
+                "chd": "461"
+              }
+            }
+          },
+          {
+            "hotelName": "Siete Ventanas",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "646",
+                "dwb": "526",
+                "tpl": "508",
+                "chd": "430"
+              },
+              "foreign": {
+                "swb": "653",
+                "dwb": "548",
+                "tpl": "533",
+                "chd": "431"
+              }
+            }
+          },
+          {
+            "hotelName": "Tierra Viva",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "716",
+                "dwb": "554",
+                "tpl": "552",
+                "chd": "475"
+              },
+              "foreign": {
+                "swb": "736",
+                "dwb": "587",
+                "tpl": "590",
+                "chd": "488"
+              }
+            }
+          },
+          {
+            "hotelName": "San Agustín Internacional",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "712",
+                "dwb": "534",
+                "tpl": "506",
+                "chd": "428"
+              },
+              "foreign": {
+                "swb": "709",
+                "dwb": "556",
+                "tpl": "532",
+                "chd": "430"
+              }
+            }
+          },
+          {
+            "hotelName": "San Agustín Dorado",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "754",
+                "dwb": "555",
+                "tpl": "529",
+                "chd": "451"
+              },
+              "foreign": {
+                "swb": "745",
+                "dwb": "574",
+                "tpl": "552",
+                "chd": "449"
+              }
+            }
+          },
+          {
+            "hotelName": "San Agustín Plaza",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "775",
+                "dwb": "566",
+                "tpl": "536",
+                "chd": "458"
+              },
+              "foreign": {
+                "swb": "763",
+                "dwb": "583",
+                "tpl": "558",
+                "chd": "455"
+              }
+            }
+          },
+          {
+            "hotelName": "Xima Hotel",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "777",
+                "dwb": "570",
+                "tpl": "570",
+                "chd": "489"
+              },
+              "foreign": {
+                "swb": "765",
+                "dwb": "634",
+                "tpl": "588",
+                "chd": "482"
+              }
+            }
+          },
+          {
+            "hotelName": "José Antonio",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "843",
+                "dwb": "603",
+                "tpl": "602",
+                "chd": "521"
+              },
+              "foreign": {
+                "swb": "827",
+                "dwb": "618",
+                "tpl": "617",
+                "chd": "512"
+              }
+            }
+          },
+          {
+            "hotelName": "Casa Andina Classic (Plaza)",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "855",
+                "dwb": "623",
+                "tpl": "622",
+                "chd": "541"
+              },
+              "foreign": {
+                "swb": "836",
+                "dwb": "635",
+                "tpl": "634",
+                "chd": "529"
+              }
+            }
+          },
+          {
+            "hotelName": "Casa Andina Classic (San Blas)",
+            "category": "3*",
+            "prices": {
+              "peruvian": {
+                "swb": "723",
+                "dwb": "556",
+                "tpl": "556",
+                "chd": "476"
+              },
+              "foreign": {
+                "swb": "723",
+                "dwb": "579",
+                "tpl": "578",
+                "chd": "473"
+              }
+            }
+          },
+          {
+            "hotelName": "Los Portales",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "812",
+                "dwb": "583",
+                "tpl": "572",
+                "chd": "494"
+              },
+              "foreign": {
+                "swb": "793",
+                "dwb": "597",
+                "tpl": "590",
+                "chd": "487"
+              }
+            }
+          },
+          {
+            "hotelName": "Sonesta",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "898",
+                "dwb": "627",
+                "tpl": "631",
+                "chd": "548"
+              },
+              "foreign": {
+                "swb": "911",
+                "dwb": "657",
+                "tpl": "661",
+                "chd": "553"
+              }
+            }
+          },
+          {
+            "hotelName": "Costa del Sol (hab. moderna)",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "957",
+                "dwb": "685",
+                "tpl": "640",
+                "chd": "557"
+              },
+              "foreign": {
+                "swb": "926",
+                "dwb": "689",
+                "tpl": "650",
+                "chd": "543"
+              }
+            }
+          },
+          {
+            "hotelName": "Casa Andina Premium",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "1062",
+                "dwb": "734",
+                "tpl": "734",
+                "chd": "650"
+              },
+              "foreign": {
+                "swb": "1017",
+                "dwb": "731",
+                "tpl": "731",
+                "chd": "622"
+              }
+            }
+          },
+          {
+            "hotelName": "Novotel",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "1080",
+                "dwb": "740",
+                "tpl": "677",
+                "chd": "593"
+              },
+              "foreign": {
+                "swb": "1032",
+                "dwb": "736",
+                "tpl": "682",
+                "chd": "574"
+              }
+            }
+          },
+          {
+            "hotelName": "Aranwa Hotel (hab. classic)",
+            "category": "4*",
+            "prices": {
+              "peruvian": {
+                "swb": "1414",
+                "dwb": "884",
+                "tpl": "782",
+                "chd": "697"
+              },
+              "foreign": {
+                "swb": "1320",
+                "dwb": "860",
+                "tpl": "774",
+                "chd": "664"
+              }
+            }
+          },
+          {
+            "hotelName": "Palacio del Inka",
+            "category": "5*",
+            "prices": {
+              "peruvian": {
+                "swb": "2045",
+                "dwb": "1215",
+                "tpl": "1095",
+                "chd": "1005"
+              },
+              "foreign": {
+                "swb": "1865",
+                "dwb": "1148",
+                "tpl": "1045",
+                "chd": "932"
+              }
+            }
           }
         ]
+
       }
     ]
   }

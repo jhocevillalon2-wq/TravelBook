@@ -235,23 +235,10 @@
           "FIN DE LOS SERVICIOS"
         ],
         "images": [
-          {
-            "alt": "Cusco Colorido",
-            "src": "assets/img/cusco-colorido-1.jpg",
-            "width": 800
-          },
-          {
-            "alt": "Montaña de 7 Colores",
-            "src": "assets/img/montana-7-colores.jpg",
-            "width": 800
-          },
-          {
-            "alt": "Machu Picchu",
-            "src": "assets/img/machu-picchu.jpg",
-            "width": 800
-          }
-        ]
-      },
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ]      },
       {
         "id": "3",
         "price": "Consultar",
@@ -326,26 +313,9 @@
           "Recomendaciones: Zapatos de trekking, impermeable, cantimplora, protector solar, gorro para frío y con visera, guantes, ropa abrigadora."
         ],
         "images": [
-          {
-            "alt": "Vista de Machu Picchu",
-            "src": "/assets/images/machu-picchu.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Montaña 7 Colores",
-            "src": "/assets/images/montana-7-colores.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Valle Sagrado de los Incas",
-            "src": "/assets/images/valle-sagrado.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Centro de Cusco",
-            "src": "/assets/images/cusco-city.jpg",
-            "width": 1200
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ]
       },
       {
@@ -410,26 +380,9 @@
           "Se recomienda llevar cámara fotográfica y agua."
         ],
         "images": [
-          {
-            "alt": "Vista de Machu Picchu",
-            "src": "/assets/images/machu-picchu.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Valle Sagrado de los Incas",
-            "src": "/assets/images/valle-sagrado.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Centro de Cusco",
-            "src": "/assets/images/cusco-city.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Aguas Calientes",
-            "src": "/assets/images/aguas-calientes.jpg",
-            "width": 1200
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ]
       },
       {
@@ -499,28 +452,10 @@
           "Se recomienda llevar cámara fotográfica y agua."
         ],
         "images": [
-          {
-            "alt": "Vista de Machu Picchu",
-            "src": "/assets/images/machu-picchu.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Valle Sagrado de los Incas",
-            "src": "/assets/images/valle-sagrado.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Centro de Cusco",
-            "src": "/assets/images/cusco-city.jpg",
-            "width": 1200
-          },
-          {
-            "alt": "Aguas Calientes",
-            "src": "/assets/images/aguas-calientes.jpg",
-            "width": 1200
-          }
-        ]
-      },
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ]      },
       {
         "id": "6",
         "price": "Consultar",
@@ -587,16 +522,9 @@
           "No incluye entradas a la Catedral"
         ],
         "images": [
-          {
-            "alt": "Machu Picchu",
-            "src": "path/to/machu_picchu_image.jpg",
-            "width": 800
-          },
-          {
-            "alt": "Valle Sagrado",
-            "src": "path/to/valle_sagrado_image.jpg",
-            "width": 800
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ]
       },
       {
@@ -677,21 +605,9 @@
           "Se recomienda llevar ropa adecuada para caminatas y el clima de montaña"
         ],
         "images": [
-          {
-            "alt": "Machu Picchu",
-            "src": "path/to/machu_picchu_image.jpg",
-            "width": 800
-          },
-          {
-            "alt": "Montaña 7 Colores",
-            "src": "path/to/montana_7_colores_image.jpg",
-            "width": 800
-          },
-          {
-            "alt": "Valle Sagrado",
-            "src": "path/to/valle_sagrado_image.jpg",
-            "width": 800
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ]
       },
       {
@@ -754,16 +670,9 @@
           "Para la opción del Tren Vistadome, se debe confirmar con anticipación."
         ],
         "images": [
-          {
-            "alt": "Vista de Machu Picchu",
-            "src": "https://example.com/images/machu_picchu.jpg",
-            "width": 600
-          },
-          {
-            "alt": "Valle Sagrado",
-            "src": "https://example.com/images/valle_sagrado.jpg",
-            "width": 600
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ]
       },
       {
@@ -832,78 +741,67 @@
           "Para la opción del Tren Vistadome, se debe confirmar con anticipación.",
           "Recomendaciones para el Tour Montaña 7 Colores: tipo de tour Aventura, dificultad media. Se recomienda llevar zapato de trekking, impermeable, cantinflora, protector solar, gorro para frío y con visera, guantes, y ropa abrigadora."
         ],
+
         "images": [
-          {
-            "alt": "Machu Picchu",
-            "src": "https://example.com/images/machu_picchu.jpg",
-            "width": 600
-          },
-          {
-            "alt": "Montaña 7 Colores",
-            "src": "https://example.com/images/montana_7_colores.jpg",
-            "width": 600
-          },
-          {
-            "alt": "Laguna Humantay",
-            "src": "https://example.com/images/laguna_humantay.jpg",
-            "width": 600
-          }
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
         ],
         "hotelPricing":[
-        {
-          "hotelName":"San Francisco Pardo",
-          "category":"3*",
-          "prices":{
-            "peruvian":{
-              "swb":"504",
-              "dwb":"444",
-              "tpl":"435",
-              "chd":"357"
-            },
-            "foreign":{
-              "swb":"551",
-              "dwb":"491",
-              "tpl":"482",
-              "chd":"379"
+          {
+            "hotelName":"San Francisco Pardo",
+            "category":"3*",
+            "prices":{
+              "peruvian":{
+                "swb":"504",
+                "dwb":"444",
+                "tpl":"435",
+                "chd":"357"
+              },
+              "foreign":{
+                "swb":"551",
+                "dwb":"491",
+                "tpl":"482",
+                "chd":"379"
+              }
             }
-          }
-        },
-        {
-          "hotelName":"Chinkana del Inka",
-          "category":"2*",
-          "prices":{
-            "peruvian":{
-              "swb":"534",
-              "dwb":"457",
-              "tpl":"450",
-              "chd":"372"
-            },
-            "foreign":{
-              "swb":"581",
-              "dwb":"504",
-              "tpl":"496",
-              "chd":"394"
+          },
+          {
+            "hotelName":"Chinkana del Inka",
+            "category":"2*",
+            "prices":{
+              "peruvian":{
+                "swb":"534",
+                "dwb":"457",
+                "tpl":"450",
+                "chd":"372"
+              },
+              "foreign":{
+                "swb":"581",
+                "dwb":"504",
+                "tpl":"496",
+                "chd":"394"
+              }
             }
-          }
-        },
-        {
-          "hotelName":"Hotel Turiwasi",
-          "category":"3*",
-          "prices":{
-            "peruvian":{
-              "swb":"531",
-              "dwb":"464",
-              "tpl":"460",
-              "chd":"382"
-            },
-            "foreign":{
-              "swb":"577",
-              "dwb":"511",
-              "tpl":"507",
-              "chd":"405"
+          },
+          {
+            "hotelName":"Hotel Turiwasi",
+            "category":"3*",
+            "prices":{
+              "peruvian":{
+                "swb":"531",
+                "dwb":"464",
+                "tpl":"460",
+                "chd":"382"
+              },
+              "foreign":{
+                "swb":"577",
+                "dwb":"511",
+                "tpl":"507",
+                "chd":"405"
+              }
             }
-          }
-        },
+          },
           {
             "hotelName": "Hotel Warari",
             "category": "3*",
@@ -1354,7 +1252,8 @@
               }
             }
           }
-      ]
+        ]
+
       }
     ]
   }

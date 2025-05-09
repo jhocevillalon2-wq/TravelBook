@@ -49,6 +49,43 @@
           <li *ngFor="let note of package?.notes">{{ note }}</li>
         </ul>
       </div>
+
+      <ng-container *ngIf="package.hotelPricing">
+        <!-- Hotel Pricing Table -->
+        <div class="overflow-x-auto mb-8">
+          <h2 class="text-2xl font-semibold text-purple-700 mb-4">Precios por Hotel:</h2>
+          <table class="min-w-full table-auto">
+            <thead>
+            <tr class="bg-purple-400">
+              <th class="px-4 py-2 text-left">Hotel</th>
+              <th class="px-4 py-2 text-left">Categoría</th>
+              <th class="px-4 py-2 text-left">SIMPLE (Peruano)</th>
+              <th class="px-4 py-2 text-left">DOBLE (Peruano)</th>
+              <th class="px-4 py-2 text-left">TRIPLE (Peruano)</th>
+              <th class="px-4 py-2 text-left">NIÑO (Peruano)</th>
+              <th class="px-4 py-2 text-left">SIMPLE (Extranjero)</th>
+              <th class="px-4 py-2 text-left">DOBLE (Extranjero)</th>
+              <th class="px-4 py-2 text-left">TRIPLE (Extranjero)</th>
+              <th class="px-4 py-2 text-left">NIÑO (Extranjero)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let hotel of package?.hotelPricing">
+              <td class="px-4 py-2">{{ hotel.hotelName }}</td>
+              <td class="bg-yellow-400 px-4 py-2">{{ hotel.category }}</td>
+              <td class="px-4 py-2">{{ hotel.prices.peruvian.swb }}</td>
+              <td class="px-4 py-2">{{ hotel.prices.peruvian.dwb }}</td>
+              <td class="px-4 py-2">{{ hotel.prices.peruvian.tpl }}</td>
+              <td class="px-4 py-2">{{ hotel.prices.peruvian.chd }}</td>
+              <td class="px-4 py-2">{{ hotel.prices.foreign.swb }}</td>
+              <td class="px-4 py-2">{{ hotel.prices.foreign.dwb }}</td>
+              <td class="px-4 py-2">{{ hotel.prices.foreign.tpl }}</td>
+              <td class="px-4 py-2">{{ hotel.prices.foreign.chd }}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </ng-container>
     </div>
 
     <!-- Botón de compra -->
