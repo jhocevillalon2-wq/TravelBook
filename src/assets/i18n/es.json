@@ -28,9 +28,145 @@
     }
   },
   "TOURS": {
-
+    "brand": "TRAVEL BOOK PERU",
+    "title": "TOURS",
+    "packages": [
+      {
+        "id": "1",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "3 dias",
+        "title": "CUSCO BASICO 03 DÍAS / 02 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 336"
+      },
+      {
+        "id": "2",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "4 dias",
+        "title": "CUSCO COLORIDO 04 DÍAS - 03 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 398"
+      },
+      {
+        "id": "3",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "5 dias",
+        "title": "CUSCO COLORIDO 05 DÍAS - 04 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 452"
+      },
+      {
+        "id": "4",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "4 dias",
+        "title": "CUSCO CON AGUAS CALIENTES  04 DÍAS – 03 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 397"
+      },
+      {
+        "id": "5",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "5 dias",
+        "title": "CUSCO CON AGUAS CALIENTES  05 DÍAS – 04 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 432"
+      },
+      {
+        "id": "6",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "5 dias",
+        "title": "CUSCO IMPERIAL 05 DÍAS - 04 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 449"
+      },
+      {
+        "id": "7",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "6 dias",
+        "title": "CUSCO INCA 06 DÍAS - 05 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 501"
+      },
+      {
+        "id": "8",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "4 dias",
+        "title": "CUSCO MAGICO 04 DÍAS - 03 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 403"
+      },
+      {
+        "id": "9",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "5 dias",
+        "title": "CUSCO TURQUESA 05 DÍAS - 04 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 444"
+      }
+    ]
   },
   "TRASLADOS":{
 
+  },
+  "INFO_PACKAGE": {
+    "TOURS": [
+      {
+        "id": "1",
+        "packageTitle": "CUSCO BASICO - 03 DÍAS / 02 NOCHES",
+        "includes": [
+          "Traslados in – out en Cusco",
+          "02 noches de hotel en Cusco + 02 desayunos",
+          "Excursión a la ciudad del Cusco y 4 Ruinas (Qoricancha)",
+          "Excursión a Machu Picchu",
+          "Boleto de tren Expedition a Machu Picchu",
+          "Bus de subida y bajada a Machu Picchu",
+          "Almuerzo en Machu Picchu (Apu Inti)",
+          "Todas las entradas a los atractivos de acuerdo al itinerario",
+          "Excursiones en servicio compartido",
+          "Guiado profesional español o ingles"
+        ],
+        "notIncluded": [
+          "Tickets aéreos internacionales y domésticos",
+          "El early check-in (llegada temprana) y el late check-out (salida más tarde) de los horarios establecidos del hotel",
+          "Seguro de viaje",
+          "Comidas no mencionadas y propinas",
+          "Gastos personales (bebidas, seguro médico o de viaje, lavandería, etc.)",
+          "Ingreso a la Catedral"
+        ],
+        "optional": [
+          {
+            "title": "Tren Vistadome",
+            "price": "80",
+            "currency": "USD"
+          }
+        ],
+        "itinerary": [
+          {
+            "day": "1",
+            "title": "CUSCO IN - CITY TOUR",
+            "description": "Llegada a la ciudad imperial (Cusco). Bienvenida, asistencia y traslado hacia el hotel. Descanso para aclimatación. 14:00Hrs Iniciará el recorrido en el Qoricancha, legendario Templo del Sol y principal lugar ceremonial del Imperio Incaico, que, junto con el Convento de Santo Domingo, lucen una fascinante combinación de arquitectura Inca y colonial. Luego subirá hacia las alturas de la ciudad, al impresionante complejo arqueológico de Sacsayhuaman, una de las mayores obras de los Incas, donde se encuentran gigantescos muros de piedras megalíticas perfectamente colocadas, y se aprecian las mejores vistas de la ciudad de Cusco. De allí visitamos Quenko, lugar antiguo de ceremonias y sacrificios, seguido del puesto militar Inca de Pucapucara (o piedra roja). Tomará un descanso en un centro artesanal para disfrutar de nuestro Té del Inka, un agradable momento de refrigerio. Finalmente, visitará Tambo Machay, la Fuente del Inca, lugar antiguo de veneración al agua y las lluvias. Retorno al hotel. Alojamiento en Cusco."
+          },
+          {
+            "day": "2",
+            "title": "EXC. FD SANTUARIO HISTÓRICO DE MACHU PICCHU",
+            "description": "Desayuno en el hotel (Cusco). Am. Recojo y traslado a la estación de trenes. Hora indicada abordara el tren hacia Aguas Calientes, el pueblo al pie de Machu Picchu. De allí, un corto viaje en bus lo llevara al complejo arqueológico de Machu Picchu, una de las maravillas del mundo moderno. Al pasear por el complejo, podrá admirar la impresionante arquitectura mientras su guía comparte interesantes teorías sobre la historia e importancia de Machu Picchu para los Incas. Las grandiosas vistas y la magia del lugar son incomparables. Luego de dos horas de recorrido, bajara en bus hacia Aguas Calientes para el almuerzo. Finalmente abordará el tren de retorno a Ollantaytambo, donde será recogido por una movilidad para retornar a la ciudad de Cusco. Alojamiento en Cusco."
+          },
+          {
+            "day": "3",
+            "title": "CUSCO OUT",
+            "description": "Desayuno en el hotel. Hora coordinada se realizará el recojo para trasladarlo al Aeropuerto Internacional Velasco Astete para abordar el vuelo con retorno a la ciudad de origen."
+          }
+        ],
+        "notes": [
+          "FIN DE LOS SERVICIOS"
+        ],
+        "images": [
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ]
+      }
+    ]
   }
+
 }
