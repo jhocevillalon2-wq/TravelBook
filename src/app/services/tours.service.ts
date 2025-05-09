@@ -41,6 +41,7 @@ export class PremiumTours {
                 width: +img.width || 0,
               }))
               : [],
+            hotelPricing: pkg.hotelPricing
           };
         });
       })
@@ -51,20 +52,19 @@ export class PremiumTours {
     return this.getPackagesByCategory(category).pipe(
       map(packages => {
         console.log('Lista de paquetes:', packages);
-
         if (!packages.length) {
           console.warn('No hay paquetes en esta categoría.');
           return undefined;
         }
 
         // Validar que el índice sea un número válido dentro del rango
-        if (index < 0 || index >= packages.length) {
+        if (index-1 < 0 || index-1 >= packages.length) {
           console.warn(`Índice fuera de rango (${index}), seleccionando el primer paquete.`);
           return packages[0];
         }
 
         console.log('Paquete seleccionado:', packages[index]);
-        return packages[index];
+        return packages[index-1];
       })
     );
   }

@@ -113,6 +113,7 @@
     "TOURS": [
       {
         "id": "1",
+        "price": "336",
         "packageTitle": "CUSCO BASICO - 03 DÍAS / 02 NOCHES",
         "includes": [
           "Traslados in – out en Cusco",
@@ -165,6 +166,689 @@
           { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
           { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
           { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ]
+      },
+      {
+        "id": "2",
+        "price": "300",
+        "packageTitle": "CUSCO COLORIDO - 04 DÍAS / 03 NOCHES",
+        "includes": [
+          "Traslados in – out en Cusco",
+          "03 noches de hotel en Cusco + desayunos",
+          "Excursión ciudad del Cusco y 4 Ruinas (Qoricancha)",
+          "Excursión a Machu Picchu",
+          "Boleto de tren Expedition a Machu Picchu",
+          "Bus de subida y bajada a Machu Picchu",
+          "Almuerzo en Machu Picchu (Apu Inti)",
+          "Tour a Montaña 7 Colores. Incluye desayuno y almuerzo",
+          "Excursiones en servicio compartido",
+          "Todas las entradas a los atractivos de acuerdo al Itinerario",
+          "Guiado profesional español o inglés"
+        ],
+        "notIncluded": [
+          "Tickets aéreos internacionales y domésticos",
+          "El early check-in (llegada temprana), y el late check-out (salida más tarde), de los Horarios establecidos del hotel",
+          "Seguro de viaje",
+          "Comidas no mencionadas y propinas",
+          "Gastos personales (bebidas, seguro médico o de viaje, lavandería, etc.)",
+          "Ingreso a la Catedral"
+        ],
+        "optional": [
+          {
+            "title": "Tren Vistadome",
+            "price": "80",
+            "currency": "USD"
+          },
+          {
+            "title": "Caballo con arriero",
+            "price": "30",
+            "currency": "USD"
+          }
+        ],
+        "itinerary": [
+          {
+            "day": "1",
+            "title": "CUSCO IN - CITY TOUR",
+            "description": "Llegada a la ciudad imperial (Cusco). Bienvenida, asistencia y traslado hacia el hotel. Descanso para aclimatación. 14:00Hrs Iniciará el recorrido en el Qoricancha, legendario Templo del Sol y principal lugar ceremonial del Imperio Incaico. Luego subirá hacia el impresionante complejo arqueológico de Sacsayhuaman, seguido de Quenko, Pucapucara y Tambo Machay. Retorno al hotel. Alojamiento en Cusco."
+          },
+          {
+            "day": "2",
+            "title": "EXC. FD SANTUARIO HISTÓRICO DE MACHU PICCHU",
+            "description": "Desayuno en el hotel. Recojo y traslado a la estación de trenes. Viaje a Aguas Calientes y ascenso a Machu Picchu. Recorrido guiado por el complejo arqueológico. Almuerzo en Aguas Calientes. Retorno a Ollantaytambo y traslado a Cusco. Alojamiento en Cusco."
+          },
+          {
+            "day": "3",
+            "title": "MONTAÑA VINICUNCA (MONTAÑA 7 COLORES)",
+            "description": "Salida temprana hacia Cusipata. Desayuno y caminata de dos horas hasta la Montaña Vinicunca (5,020 m s.n.m). Tiempo para fotos y descanso. Retorno a la movilidad y almuerzo. Llegada a Cusco. Alojamiento en Cusco."
+          },
+          {
+            "day": "4",
+            "title": "CUSCO OUT",
+            "description": "Desayuno en el hotel. Traslado al Aeropuerto Internacional Velasco Astete para el retorno a la ciudad de origen."
+          }
+        ],
+        "notes": [
+          "Tipo de tour: Aventura (Caminata)",
+          "Dificultad: Media",
+          "No incluye: Agua, cámaras fotográficas, filmadoras, etc.",
+          "Extras: Caballo con arriero $30 USD",
+          "Recomendaciones: Zapato de trekking, impermeable, cantimplora, protector solar, gorro para frío y con visera, guantes, ropa abrigadora.",
+          "FIN DE LOS SERVICIOS"
+        ],
+        "images": [
+          {
+            "alt": "Cusco Colorido",
+            "src": "assets/img/cusco-colorido-1.jpg",
+            "width": 800
+          },
+          {
+            "alt": "Montaña de 7 Colores",
+            "src": "assets/img/montana-7-colores.jpg",
+            "width": 800
+          },
+          {
+            "alt": "Machu Picchu",
+            "src": "assets/img/machu-picchu.jpg",
+            "width": 800
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "price": "Consultar",
+        "packageTitle": "CUSCO COLORIDO - 05 DÍAS / 04 NOCHES",
+        "includes": [
+          "Traslados In – Out en Cusco",
+          "04 Noches de hotel en Cusco + desayunos",
+          "Excursión a la ciudad del Cusco y 4 Ruinas (Qoricancha)",
+          "Excursión a Valle Sagrado. Incluye almuerzo",
+          "Excursión a Machu Picchu",
+          "Boleto de tren Expedition a Machu Picchu",
+          "Bus de subida y bajada a Machu Picchu",
+          "Almuerzo en Machu Picchu (Apu Inti)",
+          "Tour a Montaña 7 Colores. Incluye desayuno y almuerzo",
+          "Excursiones en servicio compartido",
+          "Todas las entradas a los atractivos de acuerdo al itinerario",
+          "Guiado profesional español o inglés"
+        ],
+        "notIncluded": [
+          "Tickets aéreos internacionales y domésticos",
+          "Early check-in y late check-out fuera de los horarios establecidos del hotel",
+          "Seguro de viaje",
+          "Comidas no mencionadas y propinas",
+          "Gastos personales (bebidas, seguro médico o de viaje, lavandería, etc.)",
+          "Ingreso a la Catedral"
+        ],
+        "optional": [
+          {
+            "title": "Tren Vistadome",
+            "price": "80.00",
+            "currency": "USD"
+          },
+          {
+            "title": "Caballo con arriero",
+            "price": "30.00",
+            "currency": "USD"
+          }
+        ],
+        "itinerary": [
+          {
+            "day": "Día 1",
+            "title": "CUSCO IN + CITY TOUR",
+            "description": "Llegada a Cusco, bienvenida, asistencia y traslado hacia el hotel. Descanso para aclimatación. A las 14:00 hrs, inicio del recorrido en el Qoricancha, Templo del Sol, seguido de visitas a Sacsayhuamán, Quenko, Pucapucara y Tambomachay. Retorno al hotel. Alojamiento en Cusco."
+          },
+          {
+            "day": "Día 2",
+            "title": "VALLE SAGRADO",
+            "description": "Desayuno. Salida a las 08:00 hrs hacia el Valle Sagrado, con paradas en Pisac y otros pueblos como Ccoya, Lamay, Calca y Urubamba. Almuerzo buffet. Por la tarde, visita guiada a Ollantaytambo y retorno a Cusco. Noche de alojamiento."
+          },
+          {
+            "day": "Día 3",
+            "title": "EXC. FD SANTUARIO HISTÓRICO DE MACHU PICCHU",
+            "description": "Desayuno en el hotel. Traslado a la estación de tren para tomar el tren hacia Aguas Calientes. Visita guiada a Machu Picchu. Almuerzo en Aguas Calientes. Retorno a Cusco en tren. Alojamiento en Cusco."
+          },
+          {
+            "day": "Día 4",
+            "title": "MONTAÑA VININCUNCA (MONTAÑA 7 COLORES)",
+            "description": "Partida temprano del hotel (4:00 - 4:30 am) hacia Cusipata. Desayuno en ruta. Caminata de 2 horas para llegar a la Montaña 7 Colores. Tiempo para disfrutar del paisaje y retorno a Cusco. Alojamiento en Cusco."
+          },
+          {
+            "day": "Día 5",
+            "title": "CUSCO OUT",
+            "description": "Desayuno en el hotel. Traslado al Aeropuerto Internacional Velasco Astete para abordar el vuelo de retorno."
+          }
+        ],
+        "notes": [
+          "Recomendaciones Tour Montaña 7 Colores:",
+          "Tipo de tour: Aventura (Caminata)",
+          "Dificultad: Media",
+          "No incluye: Agua, cámaras fotográficas, filmadoras, etc.",
+          "Extras: Caballo con arriero $30.00 dólares netos",
+          "Recomendaciones: Zapatos de trekking, impermeable, cantimplora, protector solar, gorro para frío y con visera, guantes, ropa abrigadora."
+        ],
+        "images": [
+          {
+            "alt": "Vista de Machu Picchu",
+            "src": "/assets/images/machu-picchu.jpg",
+            "width": 1200
+          },
+          {
+            "alt": "Montaña 7 Colores",
+            "src": "/assets/images/montana-7-colores.jpg",
+            "width": 1200
+          },
+          {
+            "alt": "Valle Sagrado de los Incas",
+            "src": "/assets/images/valle-sagrado.jpg",
+            "width": 1200
+          },
+          {
+            "alt": "Centro de Cusco",
+            "src": "/assets/images/cusco-city.jpg",
+            "width": 1200
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "price": "Consultar",
+        "packageTitle": "CUSCO CON AGUAS CALIENTES - 04 DÍAS / 03 NOCHES",
+        "includes": [
+          "Traslados in – out en Cusco",
+          "02 noches de hotel en Cusco + desayunos",
+          "01 noche de hotel en Aguas Calientes + desayuno",
+          "Excursión ciudad de Cusco y 4 Ruinas (Qoricancha)",
+          "Excursión a Machu Picchu",
+          "Boleto de tren Expedition a Machu Picchu",
+          "Bus de subida y bajada a Machu Picchu",
+          "Almuerzo en Machu Picchu (Apu Inti)",
+          "Excursión a Valle Sagrado. Incluye almuerzo",
+          "Excursiones en servicio compartido",
+          "Todas las entradas a los atractivos visitados de acuerdo al itinerario",
+          "Guiado profesional español o inglés"
+        ],
+        "notIncluded": [
+          "Tickets aéreos internacionales y domésticos",
+          "Early check-in y late check-out fuera de los horarios establecidos del hotel",
+          "Seguro de viaje",
+          "Comidas no mencionadas y propinas",
+          "Gastos personales (bebidas, seguro médico o de viaje, lavandería, etc.)",
+          "Ingreso a la Catedral"
+        ],
+        "optional": [
+          {
+            "title": "Tren Vistadome",
+            "price": "80.00",
+            "currency": "USD"
+          }
+        ],
+        "itinerary": [
+          {
+            "day": "Día 1",
+            "title": "CUSCO IN – CITY TOUR + RUINAS CERCANAS",
+            "description": "Arribo a la ciudad de Cusco. Recepción y traslado al hotel seleccionado, mate de coca de bienvenida. Resto de la mañana libre para aclimatarse a la altura de 3,350m.s.n.m. aprox. Entre las 13:20 y 13:45 h, iniciaremos recojo de los hoteles para visitar la ciudad y ruinas cercanas: Sacsayhuamán, Qenqo, Pucapucara y Tambomachay. Retorno al hotel. Alojamiento en Cusco."
+          },
+          {
+            "day": "Día 2",
+            "title": "VALLE SAGRADO",
+            "description": "Desayuno. Salida a las 08:00 h para visitar el Valle Sagrado de los Incas, incluyendo Pisac y otros pueblos como Ccoya, Lamay, Calca y Urubamba. Almuerzo buffet. Por la tarde, visita guiada al parque arqueológico de Ollantaytambo. Traslado a la estación de tren en Ollanta para abordar el tren hacia Aguas Calientes. Llegada a Aguas Calientes y traslado al hotel elegido. Alojamiento en Aguas Calientes."
+          },
+          {
+            "day": "Día 3",
+            "title": "FULL DAY MACHU PICCHU",
+            "description": "Desayuno en el hotel. Traslado a la estación Puente Ruinas para tomar los buses hacia Machu Picchu. Visita guiada por las principales edificaciones de la ciudadela, incluyendo El Mirador, Templo de las Tres Ventanas y la Plaza Principal. Almuerzo en Aguas Calientes. Por la tarde, retorno a Cusco en tren Expedition. Traslado al hotel. Alojamiento en Cusco."
+          },
+          {
+            "day": "Día 4",
+            "title": "CUSCO OUT",
+            "description": "Desayuno. Traslado al aeropuerto para su vuelo de retorno."
+          }
+        ],
+        "notes": [
+          "Recomendaciones para el tour a Machu Picchu:",
+          "Llevar ropa cómoda, impermeable y bloqueador solar.",
+          "No olvidar llevar pasaporte para ingresar a Machu Picchu.",
+          "Se recomienda llevar cámara fotográfica y agua."
+        ],
+        "images": [
+          {
+            "alt": "Vista de Machu Picchu",
+            "src": "/assets/images/machu-picchu.jpg",
+            "width": 1200
+          },
+          {
+            "alt": "Valle Sagrado de los Incas",
+            "src": "/assets/images/valle-sagrado.jpg",
+            "width": 1200
+          },
+          {
+            "alt": "Centro de Cusco",
+            "src": "/assets/images/cusco-city.jpg",
+            "width": 1200
+          },
+          {
+            "alt": "Aguas Calientes",
+            "src": "/assets/images/aguas-calientes.jpg",
+            "width": 1200
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "price": "Consultar",
+        "packageTitle": "CUSCO CON AGUAS CALIENTES - 05 DÍAS / 04 NOCHES",
+        "includes": [
+          "Traslados in – out en Cusco",
+          "03 noches de hotel en Cusco + desayunos",
+          "01 noche de hotel en Aguas Calientes + desayuno",
+          "Excursión ciudad de Cusco y 4 Ruinas (Qoricancha)",
+          "Excursión a Machu Picchu",
+          "Boleto de tren Expedition a Machu Picchu",
+          "Bus de subida y bajada a Machu Picchu",
+          "Almuerzo en Machu Picchu (Apu Inti)",
+          "Excursión a Valle Sagrado. Incluye almuerzo",
+          "Excursiones en servicio compartido",
+          "Todas las entradas a los atractivos visitados de acuerdo al itinerario",
+          "Guiado profesional español o inglés"
+        ],
+        "notIncluded": [
+          "Tickets aéreos internacionales y domésticos",
+          "Early check-in y late check-out fuera de los horarios establecidos del hotel",
+          "Seguro de viaje",
+          "Comidas no mencionadas y propinas",
+          "Gastos personales (bebidas, seguro médico o de viaje, lavandería, etc.)",
+          "Ingreso a la Catedral"
+        ],
+        "optional": [
+          {
+            "title": "Tren Vistadome",
+            "price": "80.00",
+            "currency": "USD"
+          }
+        ],
+        "itinerary": [
+          {
+            "day": "Día 1",
+            "title": "CUSCO IN – CITY TOUR + RUINAS CERCANAS",
+            "description": "Recepción en la ciudad de Cusco. Traslado al hotel. Mate de coca de bienvenida. Después del almuerzo, visita a la ciudad colonial y las ruinas cercanas: Sacsayhuamán, Qenqo, Pucapucara y Tambomachay. Retorno al hotel. Alojamiento en Cusco."
+          },
+          {
+            "day": "Día 2",
+            "title": "VALLE SAGRADO",
+            "description": "Desayuno. Tour al Valle Sagrado, incluyendo Pisac, Ollantaytambo y otros pueblos. Almuerzo buffet. Visita a la plaza de Chincheros. Retorno a Cusco. Alojamiento en Cusco."
+          },
+          {
+            "day": "Día 3",
+            "title": "CUSCO – AGUAS CALIENTES",
+            "description": "Desayuno. Traslado a la estación de tren hacia Aguas Calientes. Llegada y traslado al hotel. Almuerzo en Aguas Calientes. Tarde libre para disfrutar del pueblo. Opcional: baños termales. Alojamiento en Aguas Calientes."
+          },
+          {
+            "day": "Día 4",
+            "title": "FULL DAY MACHU PICCHU",
+            "description": "Desayuno en el hotel. Excursión guiada a Machu Picchu. Retorno al pueblo de Aguas Calientes para almuerzo. En la tarde, tren de regreso a Cusco. Traslado al hotel. Alojamiento en Cusco."
+          },
+          {
+            "day": "Día 5",
+            "title": "CUSCO OUT",
+            "description": "Desayuno. Traslado de salida."
+          }
+        ],
+        "notes": [
+          "Recomendaciones para el tour a Machu Picchu:",
+          "Llevar ropa cómoda, impermeable y bloqueador solar.",
+          "No olvidar llevar pasaporte para ingresar a Machu Picchu.",
+          "Se recomienda llevar cámara fotográfica y agua."
+        ],
+        "images": [
+          {
+            "alt": "Vista de Machu Picchu",
+            "src": "/assets/images/machu-picchu.jpg",
+            "width": 1200
+          },
+          {
+            "alt": "Valle Sagrado de los Incas",
+            "src": "/assets/images/valle-sagrado.jpg",
+            "width": 1200
+          },
+          {
+            "alt": "Centro de Cusco",
+            "src": "/assets/images/cusco-city.jpg",
+            "width": 1200
+          },
+          {
+            "alt": "Aguas Calientes",
+            "src": "/assets/images/aguas-calientes.jpg",
+            "width": 1200
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "price": "Consultar",
+        "packageTitle": "CUSCO IMPERIAL",
+        "includes": [
+          "Traslado in – out en Cusco",
+          "04 noches de hotel en Cusco + 4 desayunos",
+          "Excursión a la ciudad del Cusco y 4 ruinas (Qoricancha)",
+          "Excursión a Valle Sagrado. Incluye almuerzo",
+          "Excursión a Machu Picchu",
+          "Boleto de tren Expedition a Machu Picchu",
+          "Bus de subida y bajada a Machu Picchu",
+          "Almuerzo en Machu Picchu (Apu Inti)",
+          "Excursión Maras – Moray",
+          "Excursiones en servicio compartido",
+          "Todas las entradas a los atractivos de acuerdo al itinerario",
+          "Guiado profesional español o ingles"
+        ],
+        "notIncluded": [
+          "Tickets aéreos internacionales y domésticos",
+          "El early check-In (llegada temprana), y el late check-Out (salida más tarde), de los horarios establecidos del hotel",
+          "Seguro de viaje",
+          "Comidas no mencionadas y propinas",
+          "Gastos personales (bebidas, seguro médico o de viaje, lavandería, etc.)",
+          "Ingreso a la Catedral"
+        ],
+        "optional": [
+          {
+            "title": "Tren Vistadome",
+            "price": "$80.00",
+            "currency": "USD"
+          }
+        ],
+        "itinerary": [
+          {
+            "day": "DÍA 1",
+            "title": "CUSCO IN - CITY TOUR",
+            "description": "Llegada a la ciudad imperial (Cusco). Bienvenida, asistencia y traslado hacia el hotel. Descanso para aclimatación. A las 14:00 h, recorrido en el Qoricancha, Sacsayhuaman, Quenko, Pucapucara, TamboMachay y un centro artesanal para disfrutar del Té del Inka. Retorno al hotel."
+          },
+          {
+            "day": "DÍA 2",
+            "title": "VALLE SAGRADO",
+            "description": "Desayuno. A las 08:00 h, tour al Valle Sagrado, recorriendo Pisac, Ccoya, Lamay, Calca, Urubamba, con almuerzo buffet. Por la tarde, visita guiada a Ollantaytambo y retorno a Cusco por Chincheros."
+          },
+          {
+            "day": "DÍA 3",
+            "title": "EXC. FD SANTUARIO HISTÓRICO DE MACHU PICCHU",
+            "description": "Desayuno. Traslado a la estación de trenes. Viaje en tren hacia Aguas Calientes, luego traslado en bus a Machu Picchu. Visita guiada por dos horas. Almuerzo en Aguas Calientes y retorno en tren a Cusco."
+          },
+          {
+            "day": "DÍA 4",
+            "title": "MARAS – MORAY",
+            "description": "Recojo entre 8:30 y 9:00 h. Visita a Moray, centro agrícola Inca. Luego, visita a las salineras de Maras. Retorno al hotel en Cusco a las 14:00 h."
+          },
+          {
+            "day": "DÍA 5",
+            "title": "CUSCO OUT",
+            "description": "Desayuno en el hotel. Traslado al Aeropuerto Internacional Velasco Astete para el vuelo de retorno."
+          }
+        ],
+        "notes": [
+          "Consultar por precios de vuelos y trenes",
+          "El itinerario está sujeto a cambios debido a condiciones climáticas o de transporte",
+          "No incluye entradas a la Catedral"
+        ],
+        "images": [
+          {
+            "alt": "Machu Picchu",
+            "src": "path/to/machu_picchu_image.jpg",
+            "width": 800
+          },
+          {
+            "alt": "Valle Sagrado",
+            "src": "path/to/valle_sagrado_image.jpg",
+            "width": 800
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "price": "Consultar",
+        "packageTitle": "CUSCO INCA",
+        "includes": [
+          "Traslado in – out en Cusco",
+          "05 noches de alojamiento en Cusco + desayunos",
+          "Excursión a la ciudad del Cusco y 4 ruinas (Qoricancha)",
+          "Excursión a Valle Sagrado. Incluye almuerzo",
+          "Excursión a Machu Picchu",
+          "Boleto de tren Expedition a Machu Picchu",
+          "Bus de subida y bajada a Machu Picchu",
+          "Almuerzo en Machu Picchu (Apu Inti)",
+          "Excursión Maras – Moray",
+          "Tour a Montaña 7 Colores. Incluye desayuno y almuerzo",
+          "Excursiones en servicio compartido",
+          "Todas las entradas a los atractivos de acuerdo al itinerario",
+          "Guiado profesional español o ingles"
+        ],
+        "notIncluded": [
+          "Tickets aéreos internacionales y domésticos",
+          "El early Check-In (llegada temprana), y el late Check-Out (salida más tarde), de los horarios establecidos del hotel",
+          "Seguro de viaje",
+          "Comidas no mencionadas y propinas",
+          "Gastos personales (bebidas, seguro médico o de viaje, lavandería, etc.)",
+          "Ingreso a la Catedral"
+        ],
+        "optional": [
+          {
+            "title": "Tren Vistadome",
+            "price": "$80.00",
+            "currency": "USD"
+          },
+          {
+            "title": "Caballo con arriero",
+            "price": "$30.00",
+            "currency": "USD"
+          }
+        ],
+        "itinerary": [
+          {
+            "day": "DÍA 1",
+            "title": "CUSCO IN - CITY TOUR + 4 RUINAS",
+            "description": "Llegada a la ciudad imperial (Cusco). Bienvenida, asistencia y traslado hacia el hotel. Descanso para aclimatación. A las 14:00 h, recorrido en el Qoricancha, Sacsayhuaman, Quenko, Pucapucara, y TamboMachay. Retorno al hotel. Alojamiento en Cusco."
+          },
+          {
+            "day": "DÍA 2",
+            "title": "VALLE SAGRADO",
+            "description": "Desayuno. A las 08:00 h, tour al Valle Sagrado. Recorrido por Pisac, Ccoya, Lamay, Calca, y Urubamba, con almuerzo buffet. Visita a Ollantaytambo y retorno a Cusco por Chincheros. Noche de alojamiento."
+          },
+          {
+            "day": "DÍA 3",
+            "title": "EXC. FD SANTUARIO HISTÓRICO DE MACHU PICCHU",
+            "description": "Desayuno. Traslado a la estación de trenes para viajar a Aguas Calientes. Visita a Machu Picchu, almuerzo y retorno a Cusco. Alojamiento en Cusco."
+          },
+          {
+            "day": "DÍA 4",
+            "title": "MARAS – MORAY",
+            "description": "Desayuno. Recojo de su hotel a las 08:30 h. Visita a Moray y la salinera de Maras. Retorno a Cusco a las 14:00 h. Alojamiento en Cusco."
+          },
+          {
+            "day": "DÍA 5",
+            "title": "MONTAÑA VINICUNCA (MONTAÑA 7 COLORES)",
+            "description": "Recojo temprano de su hotel. Viaje a Cusipata para desayuno. Caminata hacia la Montaña de Siete Colores. Almuerzo en el retorno. Llegada a Cusco a las 16:30 h. Alojamiento en Cusco."
+          },
+          {
+            "day": "DÍA 6",
+            "title": "CUSCO OUT",
+            "description": "Desayuno. Traslado al Aeropuerto Internacional Velasco Astete para vuelo de retorno."
+          }
+        ],
+        "notes": [
+          "Consultar por precios de vuelos y trenes",
+          "El itinerario está sujeto a cambios debido a condiciones climáticas o de transporte",
+          "No incluye entradas a la Catedral",
+          "Se recomienda llevar ropa adecuada para caminatas y el clima de montaña"
+        ],
+        "images": [
+          {
+            "alt": "Machu Picchu",
+            "src": "path/to/machu_picchu_image.jpg",
+            "width": 800
+          },
+          {
+            "alt": "Montaña 7 Colores",
+            "src": "path/to/montana_7_colores_image.jpg",
+            "width": 800
+          },
+          {
+            "alt": "Valle Sagrado",
+            "src": "path/to/valle_sagrado_image.jpg",
+            "width": 800
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "price": "Precio a consultar",
+        "packageTitle": "CUSCO MÁGICO 04 DÍAS - 03 NOCHES",
+        "includes": [
+          "Traslados in – out en Cusco",
+          "03 noches de hotel en Cusco + 03 desayunos",
+          "Excursión ciudad de Cusco y 4 Ruinas (Qoricancha)",
+          "Excursión a Machu Picchu",
+          "Boleto de tren Expedition a Machu Picchu",
+          "Bus de subida y bajada a Machu Picchu",
+          "Almuerzo en Machu Picchu (Apu Inti)",
+          "Excursión a Valle Sagrado. Incluye almuerzo",
+          "Excursiones en servicio compartido",
+          "Todas las entradas a los atractivos visitados de acuerdo al itinerario",
+          "Guiado profesional español o inglés"
+        ],
+        "notIncluded": [
+          "Tickets aéreos internacionales y domésticos",
+          "El early check-In (llegada temprana) y el late check-Out (salida más tarde), de los horarios establecidos del hotel",
+          "Seguro de viaje",
+          "Comidas no mencionadas y propinas",
+          "Gastos personales (bebidas, seguro médico o de viaje, lavandería, etc.)",
+          "Ingreso a la Catedral"
+        ],
+        "optional": [
+          {
+            "title": "Tren Vistadome",
+            "price": "80.00",
+            "currency": "USD"
+          }
+        ],
+        "itinerary": [
+          {
+            "day": "DÍA 1",
+            "title": "CUSCO IN - CITY TOUR",
+            "description": "Llegada a la ciudad imperial (Cusco). Bienvenida, asistencia y traslado hacia el hotel. Descanso para aclimatación. 14:00 h. Iniciará el recorrido en el Qoricancha, legendario Templo del Sol y principal lugar ceremonial del Imperio Incaico. Luego subirá hacia las alturas de la ciudad, al impresionante complejo arqueológico de Sacsayhuaman. Después visitamos Quenko, el puesto militar Inca de Pucapucara y Tambo Machay. Retorno al hotel. Alojamiento en Cusco."
+          },
+          {
+            "day": "DÍA 2",
+            "title": "VALLE SAGRADO",
+            "description": "Desayuno. 08:00 h. Tour al Valle Sagrado de los Incas. Recorrido por el pueblo de Pisac. Almuerzo buffet. Por la tarde, visita guiada del pueblo de Ollantaytambo y su parque arqueológico. Retorno a Cusco pasando por Chincheros. Noche de alojamiento."
+          },
+          {
+            "day": "DÍA 3",
+            "title": "EXC. FD SANTUARIO HISTÓRICO DE MACHU PICCHU",
+            "description": "Desayuno en el hotel. Recojo y traslado a la estación de trenes. Tren hacia Aguas Calientes, el pueblo al pie de Machu Picchu. Bus hacia el complejo arqueológico de Machu Picchu, una de las maravillas del mundo moderno. Recorrido guiado por el complejo. Almuerzo en Aguas Calientes. Tren de retorno a Ollantaytambo y traslado a Cusco. Alojamiento en Cusco."
+          },
+          {
+            "day": "DÍA 4",
+            "title": "CUSCO OUT",
+            "description": "Desayuno en el hotel. Traslado al aeropuerto internacional Velasco Astete para abordar el vuelo de retorno a la ciudad de origen."
+          }
+        ],
+        "notes": [
+          "El precio no incluye gastos personales ni comidas no mencionadas.",
+          "La excursión a Machu Picchu está sujeta a disponibilidad y horarios.",
+          "Para la opción del Tren Vistadome, se debe confirmar con anticipación."
+        ],
+        "images": [
+          {
+            "alt": "Vista de Machu Picchu",
+            "src": "https://example.com/images/machu_picchu.jpg",
+            "width": 600
+          },
+          {
+            "alt": "Valle Sagrado",
+            "src": "https://example.com/images/valle_sagrado.jpg",
+            "width": 600
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "price": "Precio a consultar",
+        "packageTitle": "CUSCO TURQUESA 05 DÍAS - 04 NOCHES",
+        "includes": [
+          "Traslados in – out en Cusco",
+          "04 noches de hotel en Cusco + 04 desayunos",
+          "Excursión a la ciudad del Cusco y 4 Ruinas (Koricancha)",
+          "Excursión a Machu Picchu",
+          "Boleto de tren Expedition a Machu Picchu",
+          "Bus de subida y bajada a Machu Picchu",
+          "Almuerzo en Machu Picchu (Apu Inti)",
+          "Tour a Montaña 7 Colores. Incluye desayuno y almuerzo",
+          "Tour a laguna Humantay. Incluye desayuno y almuerzo",
+          "Excursiones en servicio compartido",
+          "Todas las entradas a los atractivos de acuerdo al itinerario",
+          "Guiado profesional español o inglés"
+        ],
+        "notIncluded": [
+          "Tickets aéreos internacionales y domésticos",
+          "El early check-In (llegada temprana) y el late check-Out (salida más tarde), de los horarios establecidos del hotel",
+          "Seguro de viaje",
+          "Comidas no mencionadas y propinas",
+          "Gastos personales (bebidas, seguro médico o de viaje, lavandería, etc.)",
+          "Ingreso a la Catedral"
+        ],
+        "optional": [
+          {
+            "title": "Tren Vistadome",
+            "price": "80.00",
+            "currency": "USD"
+          }
+        ],
+        "itinerary": [
+          {
+            "day": "DÍA 1",
+            "title": "CUSCO IN - CITY TOUR",
+            "description": "Llegada a la ciudad imperial (Cusco), bienvenida, asistencia y traslado hacia el hotel. Descanso para aclimatación. 14:00 h. Iniciará el recorrido en el Qoricancha, legendario Templo del Sol y principal lugar ceremonial del Imperio Incaico. Luego subirá hacia las alturas de la ciudad, al impresionante complejo arqueológico de Sacsayhuaman. Posteriormente, visitará Quenko, Pucapucara y Tambo Machay. Alojamiento en Cusco."
+          },
+          {
+            "day": "DÍA 2",
+            "title": "EXC. FD SANTUARIO HISTÓRICO DE MACHU PICCHU",
+            "description": "Desayuno en el hotel. Traslado a la estación de trenes y viaje hacia Aguas Calientes. Subida en bus hacia Machu Picchu, donde se realizará el recorrido guiado. Después del recorrido, retorno a Aguas Calientes para almorzar. Tren de regreso a Ollantaytambo y traslado a Cusco. Alojamiento en Cusco."
+          },
+          {
+            "day": "DÍA 3",
+            "title": "LAGUNA HUMANTAY",
+            "description": "Excursión a la Laguna Humantay, salida entre 4:00 y 4:30 am. Viaje a Mollepata y luego a Soraypampa para comenzar la caminata hacia la laguna (7 km). Almuerzo y retorno a Cusco. Alojamiento en Cusco."
+          },
+          {
+            "day": "DÍA 4",
+            "title": "MONTAÑA VININCUNCA (MONTAÑA 7 COLORES)",
+            "description": "Salida temprano hacia el pueblo de Cusipata, desayuno y caminata de dos horas hasta la Montaña 7 Colores. Disfrute de las impresionantes vistas y fotografía del paisaje. Retorno a Cusco. Alojamiento en Cusco."
+          },
+          {
+            "day": "DÍA 5",
+            "title": "CUSCO OUT",
+            "description": "Desayuno en el hotel. Traslado al Aeropuerto Internacional Velasco Astete para el vuelo de regreso. Fin de los servicios."
+          }
+        ],
+        "notes": [
+          "El precio no incluye gastos personales ni comidas no mencionadas.",
+          "La excursión a Machu Picchu está sujeta a disponibilidad y horarios.",
+          "Para la opción del Tren Vistadome, se debe confirmar con anticipación.",
+          "Recomendaciones para el Tour Montaña 7 Colores: tipo de tour Aventura, dificultad media. Se recomienda llevar zapato de trekking, impermeable, cantinflora, protector solar, gorro para frío y con visera, guantes, y ropa abrigadora."
+        ],
+        "images": [
+          {
+            "alt": "Machu Picchu",
+            "src": "https://example.com/images/machu_picchu.jpg",
+            "width": 600
+          },
+          {
+            "alt": "Montaña 7 Colores",
+            "src": "https://example.com/images/montana_7_colores.jpg",
+            "width": 600
+          },
+          {
+            "alt": "Laguna Humantay",
+            "src": "https://example.com/images/laguna_humantay.jpg",
+            "width": 600
+          }
         ]
       }
     ]

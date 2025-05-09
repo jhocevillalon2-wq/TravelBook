@@ -8,5 +8,23 @@ export interface TravelPackages {
   itinerary:{day:string,title:string,description:string}[]
   notes:string[];
   images:
-    {alt:string; src:string; width:number; }[]
+    {alt:string; src:string; width:number; }[],
+  hotelPricing: {
+    hotelName: string;
+    category: string;
+    prices: {
+      peruvian: {
+        swb: number;
+        dwb: number;
+        tpl: number;
+        chd: number;
+      };
+      foreign: {
+        swb: number;
+        dwb: number;
+        tpl: number;
+        chd: number;
+      };
+    };
+  }[];
 }
