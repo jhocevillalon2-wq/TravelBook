@@ -1,5 +1,6 @@
 export interface TravelPackages {
   id:string;
+  price:string;
   packageTitle:string;
   includes:string[];
   notIncluded:string[];
