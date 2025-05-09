@@ -21,6 +21,7 @@ export class PremiumTours {
         return packages.map((pkg: any): TravelPackages => {
           return {
             id: pkg.id || '',
+            price:pkg.price||'',
             packageTitle: pkg.packageTitle || '',
             includes: pkg.includes || [],
             notIncluded: pkg.notIncluded || [],

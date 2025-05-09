@@ -1,0 +1,45 @@
+
+<section class="relative w-full h-[300px] bg-gray-900 text-white">
+  <!-- Imagen de fondo -->
+  <div class="absolute inset-0">
+    <img src="../../../../assets/img/Print-MPS-DEST-02.jpg" alt="Machu Picchu" class="w-full h-full object-cover opacity-50">
+  </div>
+
+  <!-- Contenido -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+    <h1 class="text-lg md:text-lg">
+      {{ 'TOURS.brand' | translate }}
+    </h1>
+    <p class="mt-4 text-2xl md:text-5xl tracking-wide">
+      {{ 'TOURS.title' | translate }}
+    </p>
+
+    <!-- Chat Icon -->
+    <button class="fixed bottom-6 right-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition">
+      💬
+    </button>
+  </div>
+</section>
+
+<section>
+  <div class="h-auto grid grid-cols-2 gap-2 p-10 pt-32">
+    <div *ngFor="let card of packages" class="relative w-full h-[250px]" [routerLink]="['/tours', card.id]">
+      <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+      <img src="{{card.image}}" alt="{{ card.title }}" class="w-full h-full object-cover">
+      <span class="absolute top-2 left-4 text-white px-4 py-2 rounded-lg text-lg">
+        {{ card.days }}
+      </span>
+      <span class="absolute top-10 left-4 text-white px-4 py-2 rounded-lg text-lg font-semibold">
+        {{ card.title }}
+      </span>
+      <span class="absolute bottom-12 left-4 text-white px-4 py-2 rounded-lg text-sm">
+        {{ card.from }}
+      </span>
+      <span class="absolute bottom-4 left-4 text-white px-4 py-2 rounded-lg text-lg font-semibold">
+        {{ card.price }}
+      </span>
+    </div>
+  </div>
+</section>
+
+
