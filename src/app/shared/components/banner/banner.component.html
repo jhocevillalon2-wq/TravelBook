@@ -1,0 +1,27 @@
+
+<!-- Hero Slider -->
+<div class="relative overflow-hidden w-full">
+  <!-- Contenedor del carrusel -->
+  <div
+    #carouselTrack
+    class="flex transition-transform duration-500 ease-in-out"
+    [ngStyle]="{
+      'transform': 'translateX(' + translateX + 'px)',
+      'transition': transitionEnabled ? 'transform 0.5s ease-in-out' : 'none'
+    }">
+
+    <div *ngFor="let img of duplicateImages" class="h-[50vh] flex-none" [style.width.px]="img.width">
+      <img [src]="img.src" [alt]="img.alt" class="w-full h-full object-cover" />
+    </div>
+  </div>
+
+  <!-- Botón izquierdo -->
+  <button (click)="prev()" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+    &#10094;
+  </button>
+
+  <!-- Botón derecho -->
+  <button (click)="next()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+    &#10095;
+  </button>
+</div>
