@@ -1,90 +1,132 @@
 <ng-container *ngIf="package$ | async as package">
+  <h1 class="m-10 text-sm md:text-2xl font-bold text-start text-purple-800">{{ package?.title }}</h1>
   <app-banner [images]="package.images"></app-banner>
+
+  <div class="sticky top-0 z-40 bg-white shadow-md">
+    <ul class="flex flex-wrap items-center justify-start p-10 gap-4 border-b-2 border-gray-200">
+      <li><a (click)="scrollToSection($event,'description')" class="text-gray-700 hover:text-purple-700 font-semibold">Descripción</a></li>
+      <li><a (click)="scrollToSection($event,'itinerary')" class="text-gray-700  hover:text-purple-700 font-semibold">Itinerario</a></li>
+      <li><a (click)="scrollToSection($event,'includes')" class="text-gray-700  hover:text-purple-700 font-semibold">Inclusiones</a></li>
+      <li><a  (click)="scrollToSection($event,'prices')" class="text-gray-700  hover:text-purple-700 font-semibold">Precios</a></li>
+      <ng-container *ngIf="package.optional?.length">
+        <li><a  class="text-gray-700 hover:text-purple-700 font-semibold">Notas</a></li>
+      </ng-container>
+    </ul>
+  </div>
+
   <div class="flex flex-col lg:flex-row h-full w-full p-6 gap-6">
-    <!-- Información del paquete -->
-    <div class="w-full lg:w-[65%] bg-white rounded-2xl shadow-lg p-8">
-      <h1 class="text-4xl font-bold mb-6 text-center text-purple-800">{{ package?.packageTitle }}</h1>
 
-      <!-- Itinerario -->
-      <div class="mb-8">
-        <h2 class="text-2xl font-semibold text-purple-700 mb-4">Itinerario:</h2>
-        <ul class="space-y-6">
-          <li *ngFor="let day of package?.itinerary" class="bg-purple-50 p-6 rounded-lg shadow-sm border-l-4 border-purple-400">
-            <h3 class="text-xl font-semibold text-purple-800">Día {{ day.day }}: {{ day.title }}</h3>
-            <p class="text-gray-700 text-justify">{{ day.description }}</p>
+    <div class="w-full lg:w-full bg-white rounded-2xl shadow-lg p-4">
+
+      <div class="bg-gray-100 p-6 rounded-2xl shadow-md">
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 4h10a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z" />
+            </svg>
+            Salidas diarias
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l7 7 7-7" />
+            </svg>
+            Servicio grupal
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            Guía de turismo
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c.828 0 1.5-.672 1.5-1.5S12.828 8 12 8s-1.5.672-1.5 1.5S11.172 11 12 11zm0 0v6m0 0c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-5a2 2 0 00-2-2h-4a2 2 0 00-2 2z" />
+            </svg>
+            Cancelación Flexible
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v12.494m0 0L8.25 15m3.75 3.747l3.75-3.747" />
+            </svg>
+            Recojo desde hotel
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v12.494m0 0L8.25 15m3.75 3.747l3.75-3.747" />
+            </svg>
+            Español
+          </li>
+        </ul>
+        <p class="text-sm text-purple-700 mt-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1 4h1m-1-4v-2a2 2 0 011-1.732 2 2 0 012 0A2 2 0 0115 10v2a2 2 0 011 1.732V16m-2 0h-2" />
+          </svg>
+          Por favor leer las notas de viaje antes de reservar.
+        </p>
+      </div>
+
+      <div id="description" class="p-8 bg-gray-50 rounded-lg shadow-lg mb-8">
+      <h2 class="text-2xl font-semibold text-purple-700 my-4">{{ package?.subtitle }}</h2>
+      <p [innerHTML]="package.description"></p>
+      <h2 class="text-2xl font-semibold text-purple-700 my-4">¿Por qué amarás el{{ package?.subtitle }}?</h2>
+        <li *ngFor="let why of package.whyChooseUs">{{ why }}</li>
+    </div>
+
+      <div id="itinerary" class="p-8 bg-gray-50 rounded-lg shadow-lg mb-8">
+      <h2 class="text-2xl font-semibold text-purple-700 mb-4">Itinerario</h2>
+      <div class="flex flex-col text-xl mb-4">
+        <span><strong>Inicio:</strong> {{package.startDate}}</span>
+        <span><strong>Fin:</strong> {{package.endDate}}</span>
+      </div>
+      <ul class="space-y-6">
+        <li *ngFor="let day of package.itinerary" class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-purple-400">
+          <p>{{day}}</p>
+        </li>
+      </ul>
+    </div>
+
+      <div id="includes" class="p-8 bg-gray-50 rounded-lg shadow-lg mb-8">
+        <h2 class="text-2xl font-semibold text-purple-700 mb-4">Incluye</h2>
+        <ul class="grid grid-cols-2 gap-4 ">
+          <li class="flex items-center gap-2" *ngFor="let include of package.includes">
+            <i class="fas fa-check text-purple-700"></i>
+            <span class="font-normal ">{{ include }}</span>
           </li>
         </ul>
       </div>
 
-      <!-- Incluye / No Incluye -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        <div>
-          <h2 class="text-2xl font-semibold text-purple-700 mb-4">Incluye:</h2>
-          <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li *ngFor="let include of package?.includes">{{ include }}</li>
-          </ul>
-        </div>
-        <div>
-          <h2 class="text-2xl font-semibold text-purple-700 mb-4">No Incluye:</h2>
-          <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li *ngFor="let notIncluded of package?.notIncluded">{{ notIncluded }}</li>
-          </ul>
-        </div>
+
+      <div id="prices" class="p-8 bg-gray-50 rounded-lg shadow-lg mb-8">
+        <h2 class="text-2xl font-semibold text-purple-700 mb-4">Precios</h2>
+
+        <table class="w-full text-left text-gray-700 border-collapse">
+          <thead>
+          <tr class="border-b border-gray-300">
+            <th class="py-2 px-4">Tarifa</th>
+            <th class="py-2 px-4">Precio por persona</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="border-b border-gray-200">
+            <td class="py-2 px-4 font-medium">Peruano</td>
+            <td class="py-2 px-4">{{ package.prices.per }}</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">Extranjero</td>
+            <td class="py-2 px-4">{{ package.prices.ext }}</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
 
-      <!-- Opcionales -->
-      <div class="mb-8">
-        <h2 class="text-2xl font-semibold text-purple-700 mb-4">Opcionales:</h2>
+
+      <ng-container *ngIf="package.optional?.length">
+      <div id="notes" class="p-8 bg-gray-50 rounded-lg shadow-lg mb-8">
+        <h2 class="text-2xl font-semibold text-purple-700 mb-4">Notas</h2>
         <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li *ngFor="let option of package?.optional">
-            {{ option.title }} - {{ option.price }} {{ option.currency }}
-          </li>
+          <li *ngFor="let note of package.optional">{{ note }}</li>
         </ul>
       </div>
-
-      <!-- Notas -->
-      <div class="mb-8">
-        <h2 class="text-2xl font-semibold text-purple-700 mb-4">Notas:</h2>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li *ngFor="let note of package?.notes">{{ note }}</li>
-        </ul>
-      </div>
-
-      <ng-container *ngIf="package.hotelPricing">
-        <!-- Hotel Pricing Table -->
-        <div class="overflow-x-auto mb-8">
-          <h2 class="text-2xl font-semibold text-purple-700 mb-4">Precios por Hotel:</h2>
-          <table class="min-w-full table-auto">
-            <thead>
-            <tr class="bg-purple-400">
-              <th class="px-4 py-2 text-left">Hotel</th>
-              <th class="px-4 py-2 text-left">Categoría</th>
-              <th class="px-4 py-2 text-left">SIMPLE (Peruano)</th>
-              <th class="px-4 py-2 text-left">DOBLE (Peruano)</th>
-              <th class="px-4 py-2 text-left">TRIPLE (Peruano)</th>
-              <th class="px-4 py-2 text-left">NIÑO (Peruano)</th>
-              <th class="px-4 py-2 text-left">SIMPLE (Extranjero)</th>
-              <th class="px-4 py-2 text-left">DOBLE (Extranjero)</th>
-              <th class="px-4 py-2 text-left">TRIPLE (Extranjero)</th>
-              <th class="px-4 py-2 text-left">NIÑO (Extranjero)</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let hotel of package?.hotelPricing">
-              <td class="px-4 py-2">{{ hotel.hotelName }}</td>
-              <td class="bg-yellow-400 px-4 py-2">{{ hotel.category }}</td>
-              <td class="px-4 py-2">{{ hotel.prices.peruvian.swb }}</td>
-              <td class="px-4 py-2">{{ hotel.prices.peruvian.dwb }}</td>
-              <td class="px-4 py-2">{{ hotel.prices.peruvian.tpl }}</td>
-              <td class="px-4 py-2">{{ hotel.prices.peruvian.chd }}</td>
-              <td class="px-4 py-2">{{ hotel.prices.foreign.swb }}</td>
-              <td class="px-4 py-2">{{ hotel.prices.foreign.dwb }}</td>
-              <td class="px-4 py-2">{{ hotel.prices.foreign.tpl }}</td>
-              <td class="px-4 py-2">{{ hotel.prices.foreign.chd }}</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
       </ng-container>
     </div>
 

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import {NavbarComponent} from "../../shared/components/navbar/navbar.component";
-import {FooterComponent} from '../../shared/components/footer/footer.component';
+import {NavbarComponent} from "../../../shared/components/navbar/navbar.component";
+import {FooterComponent} from '../../../shared/components/footer/footer.component';
 import {RouterLink} from '@angular/router';
-import {GalleryComponent} from '../../shared/components/gallery/gallery.component';
+import {GalleryComponent} from '../../../shared/components/gallery/gallery.component';
 import {NgForOf} from '@angular/common';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-packages',
@@ -13,7 +14,8 @@ import {NgForOf} from '@angular/common';
     FooterComponent,
     RouterLink,
     GalleryComponent,
-    NgForOf
+    NgForOf,
+    TranslatePipe
   ],
   templateUrl: './packages.component.html',
   styleUrl: './packages.component.css'
