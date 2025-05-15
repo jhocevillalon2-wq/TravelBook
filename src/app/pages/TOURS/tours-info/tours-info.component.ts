@@ -19,15 +19,19 @@ import {ToursPackageService} from '../../../services/tours-package.service';
   styleUrl: './tours-info.component.css'
 })
 export class ToursInfoComponent {
-  scrollToSection(event: Event, sectionId: string) {
-    event.preventDefault(); // Evita el salto por defecto del href
+  scrollToSection(event: Event, sectionId: string, offset = -100) {
+    event.preventDefault();
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const topPosition = element.getBoundingClientRect().top + window.scrollY + offset;
+      window.scrollTo({
+        top: topPosition,
+        behavior: 'smooth'
+      });
     }
   }
-  package$!: Observable<TourPackages | undefined>; // Ahora es un Observable
 
+  package$!: Observable<TourPackages | undefined>; // Ahora es un Observable
   constructor(
     private route: ActivatedRoute,
     private packagesService: ToursPackageService
