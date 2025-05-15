@@ -14,6 +14,7 @@ export interface TourPackages {
     ext: string;
   };
   optional: string[];
+  politics: string[];
   images: {
     alt: string;
     src: string;

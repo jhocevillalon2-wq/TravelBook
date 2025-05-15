@@ -227,6 +227,12 @@
           "ext": "ADULTO EXTRANJERO: $799, NACIONAL: $738"
         },
         "optional": [],
+        "politics": [
+          "Los precios son por persona en dólares americanos",
+          "Los precios son válidos para el año 2025",
+          "Los precios están sujetos a disponibilidad y cambios sin previo aviso",
+          "Las tarifas no incluyen impuestos ni cargos adicionales"
+        ],
         "images": [
           { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
           { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},

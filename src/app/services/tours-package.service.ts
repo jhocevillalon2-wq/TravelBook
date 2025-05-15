@@ -31,6 +31,7 @@ export class ToursPackageService {
           notIncluded: Array.isArray(pkg.notIncluded) ? pkg.notIncluded : [],
           prices: pkg.prices || { per: '', ext: '' },
           optional: Array.isArray(pkg.optional) ? pkg.optional : [],
+          politics: Array.isArray(pkg.politics) ? pkg.politics : [],
           images: Array.isArray(pkg.images) ? pkg.images : [],
         }));
       })

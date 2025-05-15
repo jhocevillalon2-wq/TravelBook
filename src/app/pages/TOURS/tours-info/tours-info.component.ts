@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {Observable} from 'rxjs';
 import {ActivatedRoute} from '@angular/router';
 import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
-import {BannerComponent} from '../../../shared/components/banner/banner.component';
 import {TourPackages} from '../../../shared/models/tour-packages.model';
 import {ToursPackageService} from '../../../services/tours-package.service';
 
@@ -11,7 +10,6 @@ import {ToursPackageService} from '../../../services/tours-package.service';
   standalone: true,
   imports: [
     NgIf,
-    BannerComponent,
     AsyncPipe,
     NgForOf
   ],

@@ -1,15 +1,19 @@
 <ng-container *ngIf="package$ | async as package">
   <h1 class="m-10 text-sm md:text-2xl font-bold text-start text-purple-800">{{ package?.title }}</h1>
-  <app-banner [images]="package.images"></app-banner>
-  <div class="flex flex-row">
-  <div class="flex flex-col w-full">
+  <div class="flex flex-row w-full">
+  <div class="flex flex-col w-[70%]">
+    <div class="px-3 w-full h-full md:h-[50vh] rounded-2xl">
+      <img [src]="package.images[1].src" [alt]="package.images[1].alt" class="w-full h-full object-cover rounded-2xl shadow-lg">
+    </div>
+    <div class="flex flex-col w-full">
     <div class="sticky top-0 z-40 bg-white shadow-md">
       <ul class="flex flex-wrap items-center justify-between p-10 gap-4 border-b-2 border-gray-200">
         <li><a (click)="scrollToSection($event,'description')" class="text-gray-700 hover:text-purple-700 font-semibold">Descripción</a></li>
         <li><a (click)="scrollToSection($event,'itinerary')" class="text-gray-700  hover:text-purple-700 font-semibold">Itinerario</a></li>
         <li><a (click)="scrollToSection($event,'includes')" class="text-gray-700  hover:text-purple-700 font-semibold">Inclusiones</a></li>
         <li><a (click)="scrollToSection($event,'not_includes')" class="text-gray-700  hover:text-purple-700 font-semibold">No Incluido</a></li>
-        <li><a  (click)="scrollToSection($event,'prices')" class="text-gray-700  hover:text-purple-700 font-semibold">Precios</a></li>
+        <li><a (click)="scrollToSection($event,'prices')" class="text-gray-700  hover:text-purple-700 font-semibold">Precios</a></li>
+        <li><a (click)="scrollToSection($event,'politics')" class="text-gray-700  hover:text-purple-700 font-semibold">Politicas</a></li>
         <ng-container *ngIf="package.optional?.length">
           <li><a  class="text-gray-700 hover:text-purple-700 font-semibold">Notas</a></li>
         </ng-container>
@@ -127,7 +131,6 @@
           </table>
         </div>
 
-
         <ng-container *ngIf="package.optional?.length">
         <div id="notes" class="p-8 bg-gray-50 rounded-lg shadow-lg mb-8">
           <h2 class="text-2xl font-semibold text-purple-700 mb-4">Notas</h2>
@@ -136,15 +139,25 @@
           </ul>
         </div>
         </ng-container>
-      </div>
+
+        <ng-container *ngIf="package.politics?.length">
+        <div id="notes" class="p-8 bg-gray-50 rounded-lg shadow-lg mb-8">
+          <h2 class="text-2xl font-semibold text-purple-700 mb-4">Politicas</h2>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li *ngFor="let note of package.politics">{{ note }}</li>
+          </ul>
+        </div>
+      </ng-container>
+
+    </div>
   </div>
-  <!-- Botón de compra -->
-  <div class="w-full lg:w-[35%] h-full flex flex-col justify-center items-center bg-purple-800 m-5 text-white rounded-2xl shadow-lg p-8">
-    <h1 class="text-3xl font-bold mb-4 text-center">Reserva tu viaje</h1>
-    <p class="text-lg font-semibold mb-6">Desde 300$</p>
-    <button class="bg-yellow-500 text-purple-900 font-semibold px-12 py-4 rounded-2xl shadow-lg hover:bg-yellow-400 hover:text-purple-800 transition-all duration-300">
-      Comprar Ahora
-    </button>
   </div>
+    <div class="sticky top-5 w-[30%] h-[50vh] flex flex-col justify-center items-center bg-purple-800 mx-2 text-white rounded-2xl shadow-lg p-8">
+      <h1 class="text-3xl font-bold mb-4 text-center">Reserva tu viaje</h1>
+      <p class="text-lg font-semibold mb-6">Desde 300$</p>
+      <button class="bg-yellow-500 text-purple-900 font-semibold px-12 py-4 rounded-2xl shadow-lg hover:bg-yellow-400 hover:text-purple-800 transition-all duration-300">
+        Comprar Ahora
+      </button>
+    </div>
   </div>
 </ng-container>
