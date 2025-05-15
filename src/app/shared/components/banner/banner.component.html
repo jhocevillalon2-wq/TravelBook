@@ -10,8 +10,8 @@
       'transition': transitionEnabled ? 'transform 0.5s ease-in-out' : 'none'
     }">
 
-    <div *ngFor="let img of duplicateImages" class="h-[50vh] flex-none" [style.width.px]="img.width">
-      <img [src]="img.src" [alt]="img.alt" class="w-full h-full object-cover" />
+    <div *ngFor="let img of duplicateImages" class="h-[50vh]  ml-5 flex-none" [style.width.px]="img.width">
+      <img [src]="img.src" [alt]="img.alt" class="w-full rounded-lg h-full object-cover" />
     </div>
   </div>
 

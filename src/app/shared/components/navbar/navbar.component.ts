@@ -18,32 +18,23 @@ export class NavbarComponent {
   @Input() enableScrollEffect: boolean = true; // Define si cambia de visibilidad al hacer scroll
   scrolled: boolean = false; // Estado para mostrar u ocultar el navbar
   menuOpen: boolean = false; // Estado del menú desplegable
+  fixed: boolean = false;
 
   constructor(
     private translate: TranslateService) {}
   navbarClasses: string =
     'opacity-0 pointer-events-none bg-transparent text-white transition-opacity duration-500'; // Clases dinámicas del navbar
 
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (this.enableScrollEffect) {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop > 20) {
-        // Navbar visible al hacer scroll
-        this.scrolled = true;
-        this.navbarClasses =
-          'opacity-100 pointer-events-auto bg-[#644d9e] text-white shadow-md transition-opacity duration-500';
-      } else {
-        // Navbar oculto al estar arriba
-        this.scrolled = false;
-        this.navbarClasses =
-          'opacity-0 pointer-events-none bg-transparent text-white transition-opacity duration-500';
-      }
+      this.scrolled = scrollTop > 0;
+      this.fixed = this.scrolled;
     } else {
-      // Navbar siempre visible si el efecto de scroll está deshabilitado
       this.scrolled = true;
-      this.navbarClasses = 'bg-[#034873] text-white';
+      this.fixed = false;
     }
   }
 

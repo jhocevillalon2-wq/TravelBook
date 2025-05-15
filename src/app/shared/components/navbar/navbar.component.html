@@ -1,6 +1,9 @@
 <nav
-  class="fixed top-0 left-0 w-full z-50 flex items-center justify-between transition-all p-4 duration-500"
-  [ngClass]="navbarClasses"
+  class="w-full bg-[#644d9e] shadow-xl z-50 text-white flex items-center justify-between transition-all p-4 duration-500"
+  [ngClass]="{
+    'fixed top-0 left-0': fixed,
+    'relative': !fixed
+  }"
 >
   <div class="flex items-center justify-between w-full md:w-1/4">
     <h1 [routerLink]="['/home']" class="h-full font-bold ml-0 ">

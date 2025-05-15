@@ -19,17 +19,64 @@
   },
   "PACKAGES": {
     "brand": "TRAVEL BOOK PERU",
-    "title": "PAQUETES",
-    "card": {
-      "days": "5 días",
-      "title": "5 DÍAS EN PERÚ: VIVE LO MEJOR DE PERÚ",
-      "from": "DESDE",
-      "price": "$USD 663"
-    }
+    "title": "PACKAGES"
   },
-  "TOURS": {
+  "DELUXE": {
     "brand": "TRAVEL BOOK PERU",
-    "title": "TOURS",
+    "title": "DELUXE",
+    "packages": [
+      {
+        "id": "1",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "3 dias",
+        "title": "RESERVA AMAZÓNICA 03 DÍAS – 02 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 538"
+      },
+      {
+        "id": "2",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "4 dias",
+        "title": "RESERVA AMAZÓNICA 04 DÍAS – 03 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 688"
+      },
+      {
+        "id": "3",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "5 dias",
+        "title": "RESERVA AMAZÓNICA 05 DÍAS – 04 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 747"
+      }
+
+    ]
+  },
+  "SUPER_DEALS": {
+    "brand": "TRAVEL BOOK PERU",
+    "title": "SUPER DEALS",
+    "packages": [
+      {
+        "id": "1",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "3 dias",
+        "title": "CUSCO BASICO 03 DÍAS / 02 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 336"
+      },
+      {
+        "id": "2",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "4 dias",
+        "title": "CUSCO COLORIDO 04 DÍAS - 03 NOCHES",
+        "from": "DESDE",
+        "price": "$USD 398"
+      }
+    ]
+  },
+  "COMFORT": {
+    "brand": "TRAVEL BOOK PERU",
+    "title": "COMFORT",
     "packages": [
       {
         "id": "1",
@@ -105,11 +152,85 @@
       }
     ]
   },
-  "TRASLADOS":{
-
+  "TOURS": {
+    "brand": "TRAVEL BOOK PERU",
+    "title": "TOURS",
+    "packages": [
+      {
+        "id": "1",
+        "image": "assets/img/Print-MPS-DEST-02.jpg",
+        "days": "1 dia",
+        "title": "CUSCO  - SOLO SERVICIOS",
+        "from": "DESDE",
+        "price": "$USD 738"
+      }
+    ]
   },
+  "TRASLADOS":{},
   "INFO_PACKAGE": {
     "TOURS": [
+      {
+        "id": "1",
+        "title": "CUSCO - SOLO SERVICIOS",
+        "subtitle": "Explora los encantos de Cusco con servicios exclusivos",
+        "description": "<strong>Un recorrido completo</strong> por los principales atractivos de \n  <strong>Cusco</strong> y el <strong>Valle Sagrado</strong>, incluyendo \n  <strong>Machu Picchu</strong>, <strong>Montaña de 7 Colores</strong> y más.<br>\n  Perfecto para viajeros que buscan una <strong>experiencia única</strong> en el \n  corazón del Imperio Inca.<br>\n  Explora los <strong>antiguos templos incas</strong>, descubre <strong>paisajes \n  impresionantes</strong> y sumérgete en la <strong>cultura ancestral</strong> que \n  ha dejado su huella en cada rincón de esta tierra sagrada.<br>\n  Ideal para quienes desean conocer la <strong>historia</strong>, la \n  <strong>belleza natural</strong> y la <strong>mística</strong> de los Andes peruanos.",
+        "whyChooseUs": [
+          "Experiencia completa en Cusco y Valle Sagrado",
+          "Guías profesionales en español o inglés",
+          "Servicio personalizado y excursiones privadas",
+          "Entradas a todos los atractivos según el itinerario"
+        ],
+        "itinerary": [
+          "DÍA 1 – JUL 12: CUSCO IN & CALCA - Llegada a Cusco, traslado al Valle Sagrado.",
+          "DÍA 2 – JUL 13: Día libre en Valle Sagrado.",
+          "DÍA 3 – JUL 14: Valle Sagrado - Visita a Pisac, Urubamba, Ollantaytambo y Chinchero.",
+          "DÍA 4 – JUL 15: City Tour - Visita a la Catedral, Qorikancha, Sacsayhuaman, Qenqo, Pucapucara y Tambomachay.",
+          "DÍA 5 – JUL 16: Machu Picchu - Visita guiada a la ciudadela Inca.",
+          "DÍA 6 – JUL 17: Montaña 7 Colores - Excursión a Vinicunca.",
+          "DÍA 7 – JUL 18: Maras-Moray en Cuatrimoto - Aventura en cuatrimoto y visita a las salineras.",
+          "DÍA 8 – JUL 19: Traslado de regreso a Cusco para vuelo de retorno."
+        ],
+        "startDate": "2025-07-12",
+        "endDate": "2025-07-19",
+        "includes": [
+          "Traslado In – Out en Cusco-Valle Sagrado - Cusco",
+          "Excursión a Valle Sagrado + Almuerzo buffet",
+          "Excursión a la ciudad combinada + catedral",
+          "Excursión a Machu Picchu",
+          "Boleto de tren Expeditions a Machu Picchu",
+          "Bus de subida y bajada a Machu Picchu",
+          "Ingreso a Machu Picchu CIRCUITO 2",
+          "Almuerzo Menú en 3 tiempos",
+          "Excursión Tour a Montaña de 7 colores + desayuno + almuerzo",
+          "Excursión Maras-Moray en cuatrimotos",
+          "Entradas a todos los atractivos de acuerdo a Itinerario",
+          "Guía Profesional en Español o Ingles",
+          "Excursiones en servicio PRIVADO"
+        ],
+        "notIncluded": [
+          "Tickets aéreos internacionales y domésticos",
+          "Alojamiento en Cusco - Valle Sagrado de los Incas",
+          "Early check-In y Late check-Out",
+          "Seguro de viaje",
+          "Comidas no mencionadas y propinas",
+          "Gastos personales (bebidas, seguro médico, lavandería, etc.)"
+        ],
+        "prices": {
+          "per": "Precio por persona en dólares americanos",
+          "ext": "ADULTO EXTRANJERO: $799, NACIONAL: $738"
+        },
+        "optional": [],
+        "images": [
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ]
+      }
+
+    ],
+    "SUPER_DEALS": [],
+    "COMFORT": [
       {
         "id": "1",
         "price": "336",
@@ -1255,6 +1376,169 @@
         ]
 
       }
+    ],
+    "DELUXE": [
+      {
+        "id": "1",
+        "price": "",
+        "packageTitle": "RESERVA AMAZÓNICA - 03 DÍAS / 02 NOCHES",
+        "includes": [
+          "Asistencia en el aeropuerto",
+          "Transporte ida y vuelta por tierra y río (Aeropuerto / Albergue / Aeropuerto)",
+          "02 noches de alojamiento en la Reserva Amazónica + Pensión completa",
+          "Agua embotellada",
+          "Excursiones a la carta (español e inglés)",
+          "Equipo básico para cada excursión",
+          "Entradas a Lago Sandoval (SERNANP), Canopy Inkaterra"
+        ],
+        "notIncluded": [
+          "Gastos personales",
+          "Servicios adicionales",
+          "Suplemento obligatorio de US $ 85.00 por persona en las noches del 24 y 31 de diciembre."
+        ],
+        "optional": [],
+        "itinerary": [
+          {
+            "day": "1",
+            "title": "Llegada a Puerto Maldonado",
+            "description": "Llegue a la ciudad de Puerto Maldonado. Un recorrido en auto lo llevará al puerto para un paseo en bote de 45 minutos por el río Madre de Dios hacia Inkaterra Reserva Amazónica. Tras la bienvenida, acomódese en su cabaña. Disfrute de excursiones como el Sistema de Trochas o el Río de Noche. Cena amazónica en el comedor principal (19:00 - 22:00 Hrs.)."
+          },
+          {
+            "day": "2",
+            "title": "Exploración del Lago Sandoval y Canopy Walkway",
+            "description": "Desayuno buffet desde las 05:30 Hrs. Visita al Lago Sandoval para avistamiento de fauna. Almuerzo en el albergue. Por la tarde, recorrido por el Inkaterra Canopy Walkway y la Caminata Anaconda. Cena a la carta desde las 19:00 Hrs."
+          },
+          {
+            "day": "3",
+            "title": "Despedida de la Reserva",
+            "description": "Disfrute de la naturaleza al amanecer. Check-out a las 10:00 Hrs. Regreso al aeropuerto en bote de 45 minutos. Opcional: almuerzo en el albergue (costo adicional)."
+          }
+        ],
+        "notes": [
+          "Hora del Check-out: 10:00 Hrs. El almuerzo del último día no está incluido.",
+          "Vuelos llegando hasta 12:00 Hrs. o 13:00 Hrs. para asegurar el almuerzo.",
+          "Ocupación triple solo en cabañas.",
+          "No recomendado para niños menores de 5 años.",
+          "Los horarios de excursiones pueden variar por clima.",
+          "Servicios adicionales y guías en otros idiomas disponibles bajo petición."
+        ],
+        "images": [
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ]         },
+      {
+        "id": "2",
+        "price": "",
+        "packageTitle": "RESERVA AMAZÓNICA - 04 DÍAS / 03 NOCHES",
+        "includes": [
+          "Asistencia en el aeropuerto",
+          "Transporte ida y vuelta por tierra y río (Aeropuerto / Albergue / Aeropuerto)",
+          "03 noches de alojamiento en la Reserva Amazónica + Pensión completa",
+          "Agua embotellada",
+          "Excursiones a la carta (español e inglés)",
+          "Equipo básico para cada excursión",
+          "Entradas a Lago Sandoval (SERNANP), Canopy Inkaterra"
+        ],
+        "notIncluded": [
+          "Gastos personales",
+          "Servicios adicionales",
+          "Suplemento obligatorio de US $ 85.00 por persona en las noches del 24 y 31 de diciembre."
+        ],
+        "optional": [],
+        "itinerary": [
+          {
+            "day": "1",
+            "title": "Llegada a Puerto Maldonado",
+            "description": "Llegue a Puerto Maldonado, conocido como la Capital de la Biodiversidad. Un recorrido en auto lo llevará al puerto para un paseo en bote de 45 minutos por el río Madre de Dios hasta Inkaterra Reserva Amazónica. Tras la bienvenida, acomódese en su cabaña. Disfrute de excursiones como el Sistema de Trochas o el Río de Noche. Cena amazónica en el comedor principal (19:00 - 22:00 Hrs.)."
+          },
+          {
+            "day": "2",
+            "title": "Exploración del Lago Sandoval y Canopy Walkway",
+            "description": "Desayuno buffet desde las 05:30 Hrs. Visita al Lago Sandoval para avistamiento de fauna. Almuerzo en el albergue. Por la tarde, recorrido por el Inkaterra Canopy Walkway y la Caminata Anaconda. Cena a la carta desde las 19:00 Hrs."
+          },
+          {
+            "day": "DÍA 3",
+            "title": "Chacra, Quebrada Gamitana y Bosque Nocturno",
+            "description": "Visite la Chacra Gamitana para explorar los cultivos locales y caminar hacia la Quebrada Gamitana, hogar de pirañas y caimanes. Luego, viaje a Inkaterra Hacienda Concepción para aprender sobre las plantas medicinales y disfrutar de un paseo en canoa. Por la noche, tome la excursión Bosque Nocturno para explorar la selva bajo la luz de las estrellas."
+          },
+          {
+            "day": "4",
+            "title": "Despedida de la Reserva",
+            "description": "Disfrute de la naturaleza al amanecer. Check-out a las 10:00 Hrs. Regreso al aeropuerto en bote de 45 minutos. Opcional: almuerzo en el albergue (costo adicional)."
+          }
+        ],
+        "notes": [
+          "Hora del Check-out: 10:00 Hrs. El almuerzo del último día no está incluido.",
+          "Vuelos llegando hasta 12:00 Hrs. o 13:00 Hrs. para asegurar el almuerzo.",
+          "Ocupación triple solo en cabañas.",
+          "No recomendado para niños menores de 5 años.",
+          "Los horarios de excursiones pueden variar por clima.",
+          "Servicios adicionales y guías en otros idiomas disponibles bajo petición."
+        ],
+        "images": [
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ]         },
+      {
+        "id": "3",
+        "price": "",
+        "packageTitle": "RESERVA AMAZÓNICA - 05 DÍAS / 04 NOCHES",
+        "includes": [
+          "Asistencia en el aeropuerto",
+          "Transporte ida y vuelta por tierra y río (Aeropuerto / Albergue / aeropuerto)",
+          "04 noches de alojamiento en la Reserva Amazónica + Pensión completa",
+          "Agua embotellada",
+          "Excursiones a la carta (español e inglés)",
+          "Equipo básico para cada excursión",
+          "Entradas a Lago Sandoval (SERNANP), Canopy Inkaterra"
+        ],
+        "notIncluded": [
+          "Gastos personales",
+          "Servicios adicionales",
+          "Suplemento obligatorio de US $ 85.00 por persona en las noches del 24 y 31 de diciembre."
+        ],
+        "itinerary": [
+          {
+            "day": "1",
+            "title": "Llegada a Puerto Maldonado",
+            "description": "Llegue a la ciudad de Puerto Maldonado, conocida como la Capital de la Biodiversidad. Un recorrido en auto lo conducirá hasta el puerto para dar inicio a la aventura amazónica con un paseo en bote de 45 minutos abrazando las orillas serpenteantes del río Madre de Dios. El bote motorizado lo llevará hasta Inkaterra Reserva Amazónica, enclavado en el corazón del bosque lluvioso. Tras una breve charla de bienvenida, acomódese en su cabaña, ubicada dentro de la primera Reserva Ecológica privada del Perú; conservada por Inkaterra desde 1975 debido a su sensible entorno. Después del almuerzo, regrese a su cabaña de lujo rústico para tomar una siesta o echarse en su hamaca. Luego podrá seleccionar las actividades de su preferencia entre la amplia variedad de excursiones a la carta a realizarse en compañía de su experimentado guía explorador Inkaterra. Recomendamos recorrer el Sistema de Trochas para una introducción a la intricada biodiversidad de la cuenca amazónica y las diferentes capas del bosque lluvioso. Camine rodeado de impresionantes árboles, como el Shihuahuaco, mientras sus oídos perciben los cantos y susurros de la exótica vida silvestre que habita este ecosistema. Son oportunidades idóneas para la observación de aves y para disfrutar de la abundancia vegetal. Tenga lista la cámara en caso aparezcan perezosos o monos en los árboles. Al atardecer, recomendamos tomar nuestra agradable excursión Río de Noche para apreciar cómo la selva se transforma en un mundo nocturno, dando paso a especies adaptadas a las sombras de la noche. Podrá encontrar desde chotacabras, búhos y capibaras hasta caimanes ocultos en las riberas. Una cena de inspiración amazónica lo espera en el comedor principal de 19:00 Hrs. – 22:00 Hrs., donde lo invitamos a brindar con su Pisco Sour de cortesía. De regreso a su cómoda cabaña, podrá descansar arrullándose con la sinfonía de criaturas que habitan el bosque circundante."
+          },
+          {
+            "day": "2",
+            "title": "Exploración del Lago Sandoval y Canopy Walkway",
+            "description": "La luz del sol se filtra a través del espesor de los árboles, mientras que los habitantes de la selva despiertan de su letargo. Puede acompañarlos desde temprano, con el desayuno buffet disponible desde las 05:30 Hrs. Visite esta mañana el Lago Sandoval, un resplandeciente espejo de agua hallado dentro de la Reserva Nacional de Tambopata. Aborde una canoa de madera tallada y reme con calma a través de los canales de agua que alimentan el lago, para luego navegarlo anqueado por hermosas palmeras. Este lago sereno es habitado por varias especies de aves, el amenazado lobo de río, monos aulladores, guacamayos, anacondas, tortugas, caimanes negros, entre otros animales. Regrese a Inkaterra Reserva Amazónica a tiempo para el almuerzo. En la tarde, recomendamos subir el emocionante Inkaterra Canopy Walkway y recorrer la Caminata Anaconda. El Inkaterra Canopy Walkway es un seguro y sofisticado sistema de puentes colgantes construidos de manera ecológica a 344 metros (1,135 pies) de altura, conectados por ocho plataformas y dos torres de observación panorámica. Esta es una oportunidad inolvidable para observar el bosque amazónico desde las copas de los árboles y comprender su dimensión. Ascienda por la primera torre a 38 metros (124 pies) sobre el suelo, con los sentidos alertas en busca de tucanes, carpinteros, trogones, monos y el sigiloso perezoso de tres dedos. De regreso al albergue, puede disfrutar de nuestra presentación diaria sobre naturaleza en el Eco Center, o reservar un tratamiento de spa. La cena a la carta lo espera desde las 19:00 Hrs."
+          },
+          {
+            "day": "3",
+            "title": "Visita a la Chacra Gamitana y Bosque Nocturno",
+            "description": "Viaje en bote 25 minutos hasta la Chacra y la Quebrada de Gamitana para descubrir más misterios del bosque lluvioso. Aprenda sobre los ingredientes cultivados por agricultores locales y pruebe frutas de estación. Explore la quebrada, hogar de pirañas, caimanes, tortugas y aves que se esconden en sus orillas. Regrese al albergue para el almuerzo. Por la noche, tome la excursión Bosque Nocturno para explorar la selva bajo la luz de las estrellas."
+          },
+          {
+            "day": "4",
+            "title": "Visita a Hacienda Concepción",
+            "description": "Navegue 35 minutos río arriba hacia Inkaterra Hacienda Concepción para explorar una antigua plantación de cacao y caucho. Aprenda sobre las propiedades medicinales de las plantas y disfrute de un paseo en canoa en busca de tortugas, chotacabras y garzas."
+          },
+          {
+            "day": "5",
+            "title": "Despedida de la Reserva",
+            "description": "Disfrute su último día rodeado de naturaleza antes del check-out a las 10:00 Hrs. Dependiendo de su horario de vuelo, puede optar por almorzar en el albergue (costo adicional) antes de su traslado al aeropuerto."
+          }
+        ],
+        "notes": [
+          "Hora del Check-out: 10:00 Hrs. El almuerzo del último día no está incluido.",
+          "Ocupación triple solo en cabañas.",
+          "No recomendado para niños menores de 5 años.",
+          "Los horarios de excursiones pueden variar por clima."
+        ],
+        "images": [
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"},
+          { "alt": "Cusco Basico", "src": "assets/img/Print-MPS-DEST-02.jpg", "width": "800"}
+        ]         }
+
+
     ]
   }
 }
