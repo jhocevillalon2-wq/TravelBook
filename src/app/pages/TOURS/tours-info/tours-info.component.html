@@ -2,9 +2,18 @@
   <h1 class="m-10 text-sm md:text-2xl font-bold text-start text-purple-800">{{ package?.title }}</h1>
   <div class="flex flex-row w-full">
   <div class="flex flex-col w-[70%]">
-    <div class="px-3 w-full h-full md:h-[50vh] rounded-2xl">
-      <img [src]="package.images[1].src" [alt]="package.images[1].alt" class="w-full h-full object-cover rounded-2xl shadow-lg">
+    <div *ngIf="package.images.length > 1; else singleImage" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div *ngFor="let img of package.images" class="px-3 w-full h-full md:h-[50vh] rounded-2xl">
+        <img [src]="img.src" [alt]="img.alt" class="w-full h-full object-cover rounded-2xl shadow-lg">
+      </div>
     </div>
+
+    <ng-template #singleImage>
+      <div class="px-3 w-full h-full md:h-[50vh] rounded-2xl">
+        <img [src]="package.images[0].src" [alt]="package.images[0].alt" class="w-full h-full object-cover rounded-2xl shadow-lg">
+      </div>
+    </ng-template>
+
     <div class="flex flex-col w-full">
     <div class="sticky top-0 z-40 bg-white shadow-md">
       <ul class="flex flex-wrap items-center justify-between p-10 gap-4 border-b-2 border-gray-200">
