@@ -3,7 +3,6 @@ import {HomeComponent} from './pages/home/home.component';
 import {ContactUsComponent} from './pages/contact-us/contact-us.component';
 import {AboutUsComponent} from './pages/about-us/about-us.component';
 import {TrasladosComponent} from './pages/traslados/traslados.component';
-import {BlogComponent} from './pages/blog/blog.component';
 
 export const routes: Routes = [
   { path:'home',component:HomeComponent},
@@ -12,7 +11,7 @@ export const routes: Routes = [
   { path:'packages', loadChildren:()=>import ('./pages/Packages/packages.routes').then(m => m.packagesRoutes)},
   { path:'about-us',component:AboutUsComponent},
   { path:'traslados',component:TrasladosComponent},
-  { path:'blog',component:BlogComponent},
+  { path:'blog',loadChildren:()=>import ('./pages/news/news.routes').then(m => m.blogRoutes)},
   { path:'tours',loadChildren:() =>import ('./pages/TOURS/tours.routes').then(m => m.toursRoutes)},
 
 ];

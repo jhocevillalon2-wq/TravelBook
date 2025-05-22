@@ -1,0 +1,42 @@
+<aside class="w-full h-full bg-[#644d9e] p-6 rounded-lg text-white">
+  <h3 class="text-lg font-bold mb-4">{{ 'SECTION_BLOG.FILTER_TITLE' | translate }}</h3>
+
+  <!-- Búsqueda -->
+  <input
+    type="text"
+    [placeholder]="'SECTION_BLOG.SEARCH' | translate"
+    [(ngModel)]="searchTerm"
+    (input)="onSearchChange()"
+    class="mb-4 w-full px-4 py-2 text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+
+  <!-- Filtro por ciudad -->
+  <h4 class="text-sm font-semibold mb-2">{{ 'SECTION_BLOG.CITY' | translate }}</h4>
+  <div class="flex flex-wrap gap-2 mb-4">
+    <button
+      *ngFor="let city of cities"
+      (click)="onCityChange(city)"
+      [ngClass]="{
+        'bg-white text-[#644d9e]': filterCity === city,
+        'bg-[#644d9e] text-white': filterCity !== city
+      }"
+      class="px-3 py-1 rounded-full text-sm font-medium hover:bg-white hover:text-violet-500 transition">
+      {{ 'SECTION_BLOG.CITIES.' + city | translate }}
+    </button>
+  </div>
+
+  <!-- Filtro por categoría -->
+  <h4 class="text-sm font-semibold mb-2">{{ 'SECTION_BLOG.CATEGORY' | translate }}</h4>
+  <div class="flex flex-wrap gap-2">
+    <button
+      *ngFor="let category of categories"
+      (click)="onCategoryChange(category)"
+      [ngClass]="{
+        'bg-white text-[#644d9e]': filterCategory === category,
+        'bg-[#644d9e] text-white': filterCategory !== category
+      }"
+      class="px-3 py-1 rounded-full text-sm font-medium hover:bg-white hover:text-violet-500 transition">
+      {{ 'SECTION_BLOG.CATEGORIES.' + category | translate }}
+    </button>
+  </div>
+</aside>

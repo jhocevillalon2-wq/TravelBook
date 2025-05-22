@@ -1,0 +1,27 @@
+<h2 class="text-center text-violet-600 text-2xl font-bold mb-4">
+  {{ titleKey | translate }}
+</h2>
+<p class="text-center p-4">
+  {{descriptionKey|translate}}
+</p>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6">
+  <app-new-card
+    *ngFor="let news of getFilteredNews()"
+    [image]="news.image"
+    [title]="news.title"
+    [category]="('SECTION_BLOG.CATEGORIES.' + news.category) | translate"
+    [date]="news.date"
+    [slug]="news.slug"
+  >
+  </app-new-card>
+</div>
+
+<div class="w-full flex items-center justify-center mb-10">
+  <button
+    (click)="showMore(city || category || '')"
+    class="px-5 py-2 bg-[#ffa600] text-center text-white rounded-md hover:bg-yellow-300 transition-colors"
+  >
+    {{ 'SECTION_BLOG.MORE_INFO' | translate }}
+  </button>
+</div>

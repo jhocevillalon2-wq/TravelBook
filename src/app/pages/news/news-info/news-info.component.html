@@ -1,0 +1,18 @@
+<div *ngIf="newsItem" class="max-w-4xl mx-auto px-4 py-10">
+  <img [src]="newsItem.image" [alt]="newsItem.title" class="w-full h-[50vh] mb-6 rounded-md shadow" />
+
+  <p class="text-sm text-gray-500 mb-2">
+    {{ newsItem.date }} | {{ 'SECTION_BLOG.CATEGORIES.' + newsItem.category | translate }}
+  </p>
+
+  <h1 class="text-3xl font-bold text-gray-800 mb-4">{{ newsItem.title }}</h1>
+
+  <div class="text-lg text-gray-700">
+    <!-- Mostrar imagen contextual solo si existe -->
+    <div *ngIf="newsItem.context_Image" class="float-none md:float-right w-full md:w-[50vh] ml-0 md:ml-4 mb-2">
+      <img [src]="newsItem.context_Image" [alt]="newsItem.title" class="w-full rounded shadow" />
+    </div>
+
+    <div [innerHTML]="newsItem.text" class="whitespace-pre-line"></div>
+  </div>
+</div>
