@@ -60,15 +60,42 @@ export class ShopifyService {
     }
   }
 
-  // Obtener un producto específico por ID - MÉTODO FALTANTE
   async getProduct(productId: string) {
     try {
-      return await this.client.product.fetch(productId);
+      console.log('getProduct called with:', productId);
+
+      let gidToUse = productId;
+
+      // Si es solo un ID numérico, construir el GID
+      if (!productId.startsWith('gid://')) {
+        gidToUse = `gid://shopify/Product/${productId}`;
+      }
+
+      console.log('Using GID:', gidToUse);
+
+      const product = await this.client.product.fetch(gidToUse);
+      console.log('Shopify returned:', product);
+
+      return product;
     } catch (error) {
-      console.error('Error fetching product:', error);
+      console.error('Error fetching product from Shopify:', error);
+
+      // AGREGAR: Intentar con diferentes formatos si falla
+      if (!productId.startsWith('gid://')) {
+        try {
+          console.log('Trying alternative fetch method...');
+          // Intentar buscar por ID numérico directamente
+          const alternativeProduct = await this.client.product.fetch(productId);
+          return alternativeProduct;
+        } catch (altError) {
+          console.error('Alternative fetch also failed:', altError);
+        }
+      }
+
       return null;
     }
   }
+
 
   // Buscar productos por query
   async searchProducts(query: string) {
@@ -99,17 +126,6 @@ export class ShopifyService {
     }
   }
 
-  // Remover del carrito
-  async removeFromCart(lineItemId: string) {
-    try {
-      this.checkout = await this.client.checkout.removeLineItems(this.checkout.id, [lineItemId]);
-      this.checkoutSubject.next(this.checkout);
-      return this.checkout;
-    } catch (error) {
-      console.error('Error removing from cart:', error);
-      throw error;
-    }
-  }
 
   // Actualizar cantidad en carrito
   async updateCartItem(lineItemId: string, quantity: number) {
@@ -154,4 +170,38 @@ export class ShopifyService {
       return [];
     }
   }
+
+  // Agregar estos métodos al shopify.service.ts
+
+// Remover múltiples items (para limpiar carrito)
+  async removeFromCart(lineItemIds: string | string[]) {
+    try {
+      const idsArray = Array.isArray(lineItemIds) ? lineItemIds : [lineItemIds];
+      this.checkout = await this.client.checkout.removeLineItems(this.checkout.id, idsArray);
+      this.checkoutSubject.next(this.checkout);
+      return this.checkout;
+    } catch (error) {
+      console.error('Error removing from cart:', error);
+      throw error;
+    }
+  }
+
+// Obtener información del carrito
+  getCartInfo() {
+    if (!this.checkout) return null;
+
+    return {
+      itemCount: this.checkout.lineItems?.length || 0,
+      totalQuantity: this.checkout.lineItems?.reduce((total: number, item: any) => total + item.quantity, 0) || 0,
+      subtotal: this.checkout.subtotalPrice?.amount || this.checkout.subtotalPrice || '0.00',
+      total: this.checkout.totalPrice?.amount || this.checkout.totalPrice || '0.00'
+    };
+  }
+
+// Verificar si un producto está en el carrito
+  isInCart(variantId: string): boolean {
+    if (!this.checkout?.lineItems) return false;
+    return this.checkout.lineItems.some((item: any) => item.variant.id === variantId);
+  }
+
 }
