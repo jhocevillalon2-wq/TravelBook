@@ -6,12 +6,16 @@ import {CartComponent} from './cart/cart.component';
 import {AuthComponent} from '../auth/auth.component';
 import {CustomerAccountComponent} from './customer-account/customer-account.component';
 import {AuthGuard} from '../../core/guards/auth.guard';
+import {LayoutComponent} from './layout/layout.component';
 
 export const marketRoutes: Routes = [
-  { path: '', redirectTo: 'productos', pathMatch: 'full' },
-  { path: 'productos', component: MarketComponent },
-  { path: 'producto/:id', component: ProductDetailComponent },
-  { path: 'carrito', component: CartComponent },
+  {path:'',
+  component:LayoutComponent,
+  children:[
+    { path:'',redirectTo:'productos',pathMatch:'full'},
+    { path: 'productos', component: MarketComponent },
+  { path: 'productos/:id', component: ProductDetailComponent },
+  { path: 'cart', component: CartComponent },
   { path: 'auth', component: AuthComponent },
   {
     path: 'mi-cuenta',
@@ -24,5 +28,6 @@ export const marketRoutes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'colecciones', component: MarketComponent },
-  { path: 'ofertas', component: MarketComponent },
+  { path: 'ofertas', component: MarketComponent },]
+  }
 ];

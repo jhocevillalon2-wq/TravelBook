@@ -75,9 +75,29 @@ export class MarketComponent implements OnInit{
     });
   }
 
-  // Ver detalles del producto
-  viewProduct(productId: string) {
-    this.router.navigate(['/producto', productId]);
+// En market.component.ts
+  viewProduct(product: any) {
+    console.log('Product object:', product);
+
+    // Extraer solo el ID numérico para la URL
+    const numericId = this.extractProductId(product.id);
+
+    // Navegar con el ID numérico en la URL
+    this.router.navigate(['/market/productos', numericId]);
+  }
+
+  extractProductId(gid: string): string {
+    if (!gid) {
+      console.error('GID is undefined or null');
+      return '';
+    }
+
+    // gid://shopify/Product/9012060389596 -> 9012060389596
+    if (typeof gid === 'string' && gid.includes('/')) {
+      return gid.split('/').pop() || gid;
+    }
+
+    return gid.toString();
   }
 
   // Agregar al carrito rápido

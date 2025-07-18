@@ -1,21 +1,23 @@
 <div class="max-w-7xl mx-auto px-4 py-6">
   <!-- Loading -->
-  <div *ngIf="loading" class="flex flex-col items-center justify-center py-20 text-blue-500">
-    <div class="animate-spin w-10 h-10 border-4 border-blue-400 border-t-transparent rounded-full mb-4"></div>
+  <div *ngIf="loading" class="flex flex-col items-center justify-center py-20 text-[#4a1466]">
+    <div class="animate-spin w-10 h-10 border-4 border-[#b19cd9] border-t-transparent rounded-full mb-4"></div>
     <p>Cargando producto...</p>
   </div>
 
   <!-- Error -->
   <div *ngIf="error && !loading" class="text-center text-red-500 py-20">
     <p>{{ error }}</p>
-    <button (click)="goBack()" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Volver a productos</button>
+    <button (click)="goBack()" class="mt-4 px-6 py-2 bg-[#ffcd38] text-[#4a1466] rounded hover:bg-[#e6b800]">
+      Volver a productos
+    </button>
   </div>
 
   <!-- Producto -->
   <div *ngIf="product && !loading">
     <!-- Breadcrumb -->
-    <nav class="text-sm text-gray-600 mb-4 space-x-2">
-      <a (click)="goBack()" class="text-blue-600 hover:underline cursor-pointer">Productos</a>
+    <nav class="text-sm text-[#4a1466] mb-4 space-x-2">
+      <a (click)="goBack()" class="hover:underline cursor-pointer">Productos</a>
       <span>/</span>
       <span>{{ product.title }}</span>
     </nav>
@@ -24,7 +26,7 @@
     <div class="grid md:grid-cols-2 gap-10 items-start">
       <!-- Imágenes -->
       <div>
-        <div class="aspect-square w-full rounded-md border border-gray-200 overflow-hidden">
+        <div class="aspect-square w-full rounded-md border border-[#b19cd9] overflow-hidden">
           <img [src]="product.images[selectedImage]?.src || 'assets/no-image.png'" class="w-full h-full object-cover" />
         </div>
 
@@ -33,7 +35,7 @@
             *ngFor="let image of product.images; let i = index"
             [src]="image.src"
             (click)="selectImage(i)"
-            [class.border-blue-500]="i === selectedImage"
+            [class.border-[#4a1466]]="i === selectedImage"
             class="w-20 h-20 object-cover rounded-md border-2 cursor-pointer transition"
           />
         </div>
@@ -41,29 +43,29 @@
 
       <!-- Información -->
       <div class="flex flex-col gap-4">
-        <h1 class="text-2xl font-bold text-gray-800">{{ product.title }}</h1>
+        <h1 class="text-2xl font-bold text-[#4a1466]">{{ product.title }}</h1>
 
-        <div *ngIf="product.vendor" class="text-sm text-gray-500">Marca: {{ product.vendor }}</div>
+        <div *ngIf="product.vendor" class="text-sm text-[#b19cd9]">Marca: {{ product.vendor }}</div>
 
         <div class="flex items-center gap-2 text-xl font-semibold text-green-600">
-          S/ {{ selectedVariant?.price }}
-          <span *ngIf="selectedVariant?.compareAtPrice" class="text-base line-through text-gray-400">
-            S/ {{ selectedVariant?.compareAtPrice }}
+          S/ {{ selectedVariant?.price?.amount }}
+          <span *ngIf="selectedVariant?.compareAtPrice" class="text-base line-through text-[#b19cd9]">
+            S/ {{ selectedVariant?.compareAtPrice?.amount }}
           </span>
           <span *ngIf="selectedVariant?.compareAtPrice" class="text-xs bg-red-500 text-white px-2 py-1 rounded">¡Oferta!</span>
         </div>
 
         <!-- Variantes -->
         <div *ngIf="product.variants.length > 1">
-          <h3 class="text-sm font-semibold text-gray-700 mb-2">Opciones:</h3>
+          <h3 class="text-sm font-semibold text-[#4a1466] mb-2">Opciones:</h3>
           <div class="flex flex-wrap gap-2">
             <button
               *ngFor="let variant of product.variants"
               (click)="selectVariant(variant)"
-              [class.bg-blue-500]="selectedVariant?.id === variant.id"
+              [class.bg-[#4a1466]]="selectedVariant?.id === variant.id"
               [class.text-white]="selectedVariant?.id === variant.id"
               [disabled]="!variant.available"
-              class="px-4 py-2 border-2 rounded hover:border-blue-500 transition disabled:opacity-50"
+              class="px-4 py-2 border-2 rounded hover:border-[#4a1466] transition disabled:opacity-50"
             >
               {{ variant.title }}
               <span *ngIf="!variant.available" class="text-xs text-red-500">(Agotado)</span>
@@ -73,11 +75,14 @@
 
         <!-- Cantidad -->
         <div>
-          <label class="block mb-1 font-medium text-sm text-gray-600">Cantidad:</label>
+          <label class="block mb-1 font-medium text-sm text-[#4a1466]">Cantidad:</label>
           <div class="flex items-center gap-3">
-            <button (click)="quantity = quantity > 1 ? quantity - 1 : 1" class="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded text-lg font-bold">-</button>
-            <input type="number" [(ngModel)]="quantity" min="1" max="10" class="w-16 text-center border rounded" />
-            <button (click)="quantity = quantity < 10 ? quantity + 1 : 10" class="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded text-lg font-bold">+</button>
+            <button (click)="quantity = quantity > 1 ? quantity - 1 : 1"
+                    class="w-10 h-10 bg-[#f3f3f3] hover:bg-[#e7e7e7] rounded text-lg font-bold">-</button>
+            <input type="number" [(ngModel)]="quantity" min="1" max="10"
+                   class="w-16 text-center border rounded border-[#b19cd9]" />
+            <button (click)="quantity = quantity < 10 ? quantity + 1 : 10"
+                    class="w-10 h-10 bg-[#f3f3f3] hover:bg-[#e7e7e7] rounded text-lg font-bold">+</button>
           </div>
         </div>
 
@@ -91,24 +96,24 @@
           <button
             (click)="addToCart()"
             [disabled]="!selectedVariant?.available"
-            class="bg-green-600 text-white py-3 px-6 rounded hover:bg-green-700 disabled:bg-gray-400"
+            class="bg-[#ffcd38] text-[#4a1466] py-3 px-6 rounded hover:bg-[#e6b800] disabled:bg-gray-400"
           >
             {{ selectedVariant?.available ? 'Agregar al Carrito' : 'Producto Agotado' }}
           </button>
 
-          <button (click)="goBack()" class="border-2 border-blue-500 text-blue-500 py-2 px-6 rounded hover:bg-blue-500 hover:text-white">
+          <button (click)="goBack()" class="border-2 border-[#4a1466] text-[#4a1466] py-2 px-6 rounded hover:bg-[#4a1466] hover:text-white">
             Seguir Comprando
           </button>
         </div>
 
         <!-- Descripción -->
-        <div *ngIf="product.descriptionHtml || product.description" class="border-t pt-6 text-gray-700">
+        <div *ngIf="product.descriptionHtml || product.description" class="border-t pt-6 text-[#4a1466]">
           <h3 class="text-lg font-semibold mb-2">Descripción</h3>
           <div [innerHTML]="product.descriptionHtml || product.description"></div>
         </div>
 
         <!-- Detalles -->
-        <div class="border-t pt-6 text-sm text-gray-600">
+        <div class="border-t pt-6 text-sm text-[#4a1466]">
           <h3 class="text-base font-semibold mb-2">Detalles del producto</h3>
           <ul>
             <li *ngIf="product.productType"><strong>Tipo:</strong> {{ product.productType }}</li>

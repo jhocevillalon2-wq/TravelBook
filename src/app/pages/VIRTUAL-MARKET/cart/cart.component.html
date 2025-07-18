@@ -1,1 +1,117 @@
-<p>cart works!</p>
+<div class="max-w-7xl mx-auto px-4 py-8 text-[#4a1466]">
+  <!-- Cabecera del carrito -->
+  <div class="flex items-center justify-between mb-6">
+    <h1 class="text-2xl font-bold">🛍️ Mi Carrito</h1>
+    <span *ngIf="getItemCount() > 0" class="text-sm text-[#b19cd9]">
+      ({{ getItemCount() }} {{ getItemCount() === 1 ? 'producto' : 'productos' }})
+    </span>
+  </div>
+
+  <!-- Cargando -->
+  <div *ngIf="loading" class="flex flex-col items-center justify-center py-16 text-[#b19cd9]">
+    <div class="animate-spin w-10 h-10 border-4 border-[#b19cd9] border-t-transparent rounded-full mb-3"></div>
+    <p>Actualizando carrito...</p>
+  </div>
+
+  <!-- Error -->
+  <div *ngIf="error" class="text-center text-red-500 bg-red-100 border border-red-300 p-4 rounded mb-6">
+    <p>{{ error }}</p>
+    <button (click)="error = ''" class="mt-2 text-sm underline">Cerrar</button>
+  </div>
+
+  <!-- Carrito vacío -->
+  <div *ngIf="!checkout?.lineItems || checkout.lineItems.length === 0" class="text-center py-16">
+    <div class="text-5xl mb-4">🛒</div>
+    <h2 class="text-xl font-semibold mb-2">Tu carrito está vacío</h2>
+    <p class="text-[#b19cd9] mb-4">¡Agrega algunos productos para comenzar!</p>
+    <button (click)="continueShopping()" class="bg-[#ffcd38] text-[#4a1466] px-6 py-2 rounded hover:bg-[#e6b800]">
+      Explorar Productos
+    </button>
+  </div>
+
+  <!-- Carrito con productos -->
+  <div *ngIf="checkout?.lineItems?.length > 0" class="grid md:grid-cols-3 gap-6">
+    <!-- Lista de productos -->
+    <div class="md:col-span-2 flex flex-col gap-4">
+      <div *ngFor="let item of checkout.lineItems; trackBy: trackByItemId" class="border p-4 rounded-lg shadow-sm flex gap-4">
+        <img [src]="item.variant.image?.src || 'assets/no-image.png'" [alt]="item.title" class="w-24 h-24 rounded object-cover" />
+
+        <div class="flex-1">
+          <h3 class="font-bold">{{ item.title }}</h3>
+          <p *ngIf="item.variant.title !== 'Default Title'" class="text-sm text-[#b19cd9]">{{ item.variant.title }}</p>
+          <p class="text-sm mt-1">Precio: S/ {{ item.variant.price?.amount || item.variant.price }}</p>
+
+          <div class="flex items-center gap-2 mt-2">
+            <button (click)="updateQuantity(item.id, item.quantity - 1)" class="w-8 h-8 border rounded" [disabled]="loading">-</button>
+            <span class="w-8 text-center">{{ item.quantity }}</span>
+            <button (click)="updateQuantity(item.id, item.quantity + 1)" class="w-8 h-8 border rounded" [disabled]="loading">+</button>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-between text-right">
+          <p class="text-sm font-semibold">
+            Total:<br />
+            S/ {{ (parseFloat(item.variant.price?.amount || item.variant.price) * item.quantity).toFixed(2) }}
+          </p>
+          <button
+            (click)="removeItem(item.id)"
+            [disabled]="loading"
+            class="text-sm text-red-500 hover:underline mt-2"
+          >
+            🗑️ Eliminar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resumen del pedido -->
+    <div class="border p-6 rounded-lg shadow-md bg-[#faf5ff]">
+      <h3 class="text-lg font-bold mb-4">Resumen del Pedido</h3>
+
+      <div class="flex justify-between mb-2">
+        <span>Subtotal:</span>
+        <span>S/ {{ getSubtotal() }}</span>
+      </div>
+
+      <div class="flex justify-between mb-2" *ngIf="getTaxes() !== '0.00'">
+        <span>Impuestos:</span>
+        <span>S/ {{ getTaxes() }}</span>
+      </div>
+
+      <div class="flex justify-between mb-4 text-sm text-[#b19cd9]">
+        <span>Envío:</span>
+        <span>Calculado en checkout</span>
+      </div>
+
+      <hr class="my-2" />
+
+      <div class="flex justify-between text-lg font-semibold mb-4">
+        <span>Total:</span>
+        <span>S/ {{ getTotal() }}</span>
+      </div>
+
+      <button
+        (click)="proceedToCheckout()"
+        [disabled]="loading"
+        class="w-full bg-[#ffcd38] text-[#4a1466] py-2 rounded hover:bg-[#e6b800] font-semibold mb-2"
+      >
+        Proceder al Pago con Izipay
+      </button>
+
+      <button
+        (click)="continueShopping()"
+        class="w-full border border-[#4a1466] text-[#4a1466] py-2 rounded hover:bg-[#4a1466] hover:text-white mb-2"
+      >
+        Continuar Comprando
+      </button>
+
+      <button
+        (click)="clearCart()"
+        [disabled]="loading"
+        class="w-full text-red-500 text-sm underline hover:text-red-600"
+      >
+        Vaciar Carrito
+      </button>
+    </div>
+  </div>
+</div>

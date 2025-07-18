@@ -38,7 +38,11 @@ export class ProductDetailComponent implements OnInit {
   async loadProduct(productId: string) {
     try {
       this.loading = true;
+      console.log('Loading product with numeric ID:', productId);
+
+      // CAMBIO: Pasar solo el ID numérico al servicio
       this.product = await this.shopifyService.getProduct(productId);
+      console.log('Loaded product:', this.product);
 
       if (this.product) {
         this.selectedVariant = this.product.variants[0];
@@ -52,6 +56,7 @@ export class ProductDetailComponent implements OnInit {
       this.loading = false;
     }
   }
+
 
   selectVariant(variant: any) {
     this.selectedVariant = variant;
@@ -77,6 +82,6 @@ export class ProductDetailComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/productos']);
+    this.router.navigate(['/market/productos']);
   }
 }
