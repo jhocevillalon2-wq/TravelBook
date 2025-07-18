@@ -116,9 +116,9 @@
           </p>
 
           <div class="flex items-center gap-2 mb-2">
-            <span class="text-yellow-500 font-semibold">{{ product.variants[0]?.price }}$</span>
+            <span class="text-yellow-500 font-semibold">{{ product.variants[0]?.price?.amount }}$</span>
             <span *ngIf="product.variants[0]?.compareAtPrice" class="line-through text-gray-400">
-              {{ product.variants[0]?.compareAtPrice }}$
+              {{ product.variants[0]?.compareAtPrice?.amount }}$
             </span>
             <span *ngIf="product.variants[0]?.compareAtPrice" class="text-red-500 text-sm">
               -{{ getDiscountPercentage(product.variants[0]) }}%

@@ -125,11 +125,15 @@ export class MarketComponent implements OnInit{
     return daysDiff <= 30; // Nuevo si tiene menos de 30 días
   }
 
-  // Calcular porcentaje de descuento
+  // Obtener el descuento
   getDiscountPercentage(variant: any): number {
-    if (!variant.compareAtPrice) return 0;
-    const original = parseFloat(variant.compareAtPrice);
-    const current = parseFloat(variant.price);
+    if (!variant.compareAtPrice || !variant.price) return 0;
+
+    const original = parseFloat(variant.compareAtPrice.amount);
+    const current = parseFloat(variant.price.amount);
+
+    if (isNaN(original) || isNaN(current) || original === 0) return 0;
+
     return Math.round(((original - current) / original) * 100);
   }
 
