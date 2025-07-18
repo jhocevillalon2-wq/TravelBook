@@ -5,7 +5,7 @@ import {FilterSidebarComponent} from '../../../shared/components/filter-sidebar/
 import {BannerComponent} from '../../../shared/components/banner/banner.component';
 import {NewsItem} from '../../../shared/models/NewItem.model';
 import {Subscription} from 'rxjs';
-import {newService} from '../../../services/news.service';
+import {newService} from '../../../core/services/news.service';
 import {NewCardComponent} from '../../../shared/components/new-card/new-card.component';
 import {NgForOf} from '@angular/common';
 

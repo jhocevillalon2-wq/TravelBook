@@ -1,0 +1,93 @@
+<div class="min-h-screen flex items-center justify-center bg-[#644d9e] px-4 py-8">
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 space-y-6">
+    <h2 class="text-2xl font-bold text-center text-[#644d9e]">
+      {{ isLoginMode ? 'Iniciar Sesión' : 'Crear Cuenta' }}
+    </h2>
+
+    <!-- Login Form -->
+    <form *ngIf="isLoginMode" [formGroup]="loginForm" (ngSubmit)="onLogin()" class="space-y-4">
+      <div>
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Email"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="Contraseña"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
+        />
+      </div>
+      <button
+        type="submit"
+        [disabled]="loading || !loginForm.valid"
+        class="w-full bg-[#FFA600] text-white font-semibold py-2 rounded-md hover:bg-[#e08d00] transition"
+      >
+        {{ loading ? 'Iniciando...' : 'Iniciar Sesión' }}
+      </button>
+    </form>
+
+    <!-- Register Form -->
+    <form *ngIf="!isLoginMode" [formGroup]="registerForm" (ngSubmit)="onRegister()" class="space-y-4">
+      <input
+        type="text"
+        formControlName="firstName"
+        placeholder="Nombre"
+        required
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
+      />
+      <input
+        type="text"
+        formControlName="lastName"
+        placeholder="Apellido"
+        required
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
+      />
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Email"
+        required
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
+      />
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Contraseña (mín. 6 caracteres)"
+        required
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
+      />
+      <input
+        type="tel"
+        formControlName="phone"
+        placeholder="Teléfono (opcional)"
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
+      />
+      <button
+        type="submit"
+        [disabled]="loading || !registerForm.valid"
+        class="w-full bg-[#FFA600] text-white font-semibold py-2 rounded-md hover:bg-[#e08d00] transition"
+      >
+        {{ loading ? 'Creando...' : 'Crear Cuenta' }}
+      </button>
+    </form>
+
+    <!-- Mensaje -->
+    <div *ngIf="message" class="text-center text-sm text-red-500">{{ message }}</div>
+
+    <!-- Toggle login/register -->
+    <p class="text-center text-sm text-gray-600">
+      {{ isLoginMode ? '¿No tienes cuenta?' : '¿Ya tienes cuenta?' }}
+      <a (click)="toggleMode()" class="text-[#644d9e] font-semibold cursor-pointer hover:underline">
+        {{ isLoginMode ? 'Crear cuenta' : 'Iniciar sesión' }}
+      </a>
+    </p>
+  </div>
+</div>
+

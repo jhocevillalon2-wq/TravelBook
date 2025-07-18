@@ -6,7 +6,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 import {HttpClient, HttpClientModule, provideHttpClient, withFetch} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {ScrollService} from './services/scroll.service';
+import {ScrollService} from './core/services/scroll.service';
 
 // Función de fábrica para el cargador de traducciones
 export function httpLoaderFactory(http: HttpClient) {

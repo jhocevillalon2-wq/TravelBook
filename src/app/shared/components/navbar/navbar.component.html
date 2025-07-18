@@ -17,10 +17,13 @@
       ></i>
     </div>
   </div>
+
+  <!--Menu Desktop-->
   <ul class="hidden md:flex gap-10 items-center text-sm">
     <li><a [routerLink]="['/tours']" class="hover:underline">Tours</a></li>
     <li><a [routerLink]="['/packages']" class="hover:underline">Paquetes</a></li>
     <li><a [routerLink]="['/traslados']" class="hover:underline">Traslados</a></li>
+    <li><a [routerLink]="['/market']" class="hover:underline">Tienda Virtual</a></li>
     <li><a [routerLink]="['/about-us']" class="hover:underline">Quiénes somos</a></li>
     <li><a [routerLink]="['/blog']" class="hover:underline">Blog</a></li>
     <li><a [routerLink]="['/contact-us']" class="hover:underline">Contáctanos</a></li>
@@ -29,9 +32,37 @@
       <span (click)="changeLanguage('en')" class="cursor-pointer">ENG</span>
     </div>
   </ul>
-  <button class="hidden md:block bg-[#FFA600] text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors">
-    Planea tu viaje
-  </button>
+
+  <!-- Área de usuario y carrito -->
+  <div class="hidden md:flex items-center gap-6">
+
+    <!-- Carrito -->
+    <a [routerLink]="['/cart']" class="relative group text-white hover:text-yellow-300">
+      <i class="fa-solid fa-cart-shopping text-xl"></i>
+      <span
+        *ngIf="cartItemCount > 0"
+        class="absolute -top-2 -right-3 bg-[#FFA600] text-xs text-white rounded-full w-5 h-5 flex items-center justify-center"
+      >
+      {{ cartItemCount }}
+    </span>
+    </a>
+
+    <!-- Usuario logueado o botón de login -->
+    <ng-container *ngIf="(customer$ | async) as customer; else loginButton">
+      <div class="flex items-center gap-2 text-white">
+        <i class="fa-solid fa-user"></i>
+        <span class="text-sm">{{ customer.firstName || 'Usuario' }}</span>
+        <button (click)="logout()" class="ml-2 text-sm hover:underline">Salir</button>
+      </div>
+    </ng-container>
+
+    <ng-template #loginButton>
+      <a [routerLink]="['/auth']" class="flex items-center gap-2 text-white hover:text-yellow-300">
+        <i class="fa-solid fa-user"></i>
+        <span class="text-sm">Ingresar</span>
+      </a>
+    </ng-template>
+  </div>
 
   <!-- Menú desplegable -->
   <div
@@ -54,5 +85,29 @@
       <span (click)="changeLanguage('es'); toggleMenu()" class="cursor-pointer text-white">ESP</span>
       <span (click)="changeLanguage('en'); toggleMenu()" class="cursor-pointer text-white">ENG</span>
     </div>
+    <!-- Carrito -->
+    <a [routerLink]="['/cart']" class="text-black py-2 border-b border-gray-600 flex items-center gap-2">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span>Carrito ({{ cartItemCount }})</span>
+    </a>
+
+    <!-- Login / Logout -->
+    <ng-container *ngIf="(customer$ | async) as customer; else loginBtnMobile">
+      <div class="text-black py-2 border-b border-gray-600 flex items-center justify-between">
+    <span class="flex items-center gap-2">
+      <i class="fa-solid fa-user"></i>
+      {{ customer.firstName || 'Usuario' }}
+    </span>
+        <button (click)="logout()" class="text-sm text-[#644d9e] hover:underline">Salir</button>
+      </div>
+    </ng-container>
+
+    <ng-template #loginBtnMobile>
+      <a [routerLink]="['/auth']" class="text-black py-2 border-b border-gray-600 flex items-center gap-2">
+        <i class="fa-solid fa-user"></i>
+        <span>Iniciar sesión</span>
+      </a>
+    </ng-template>
+
   </div>
 </nav>

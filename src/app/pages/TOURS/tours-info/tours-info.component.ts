@@ -3,7 +3,7 @@ import {Observable} from 'rxjs';
 import {ActivatedRoute} from '@angular/router';
 import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
 import {TourPackages} from '../../../shared/models/tour-packages.model';
-import {ToursPackageService} from '../../../services/tours-package.service';
+import {ToursPackageService} from '../../../core/services/tours-package.service';
 
 @Component({
   selector: 'app-tours-info',

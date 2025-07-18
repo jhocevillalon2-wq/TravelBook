@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NewsItem} from '../../../shared/models/NewItem.model';
 import { Subscription } from 'rxjs';
-import {newService} from '../../../services/news.service';
+import {newService} from '../../../core/services/news.service';
 import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import {ActivatedRoute} from '@angular/router';
 import {NgIf} from '@angular/common';

@@ -1,14 +1,19 @@
 import {Component, EventEmitter, HostListener, Input, Output} from '@angular/core';
-import {NgClass} from '@angular/common';
+import {AsyncPipe, NgClass, NgIf} from '@angular/common';
 import {RouterLink} from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
+import {Observable, of} from 'rxjs';
+import {ShopifyAuthService} from '../../../core/services/shopify-auth.service';
+import {ShopifyService} from '../../../core/services/shopify.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [
     NgClass,
-    RouterLink
+    RouterLink,
+    NgIf,
+    AsyncPipe
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
@@ -16,29 +21,39 @@ import {TranslateService} from '@ngx-translate/core';
 export class NavbarComponent {
   @Output() languageChanged = new EventEmitter<string>();
   @Input() enableScrollEffect: boolean = true; // Define si cambia de visibilidad al hacer scroll
-  scrolled: boolean = false; // Estado para mostrar u ocultar el navbar
-  menuOpen: boolean = false; // Estado del menú desplegable
+
+  customer$!: Observable<any>;
+  checkout$!: Observable<any>;
+  cartItemCount = 0;
+
+
+  scrolled: boolean = false;
+  menuOpen: boolean = false;
   fixed: boolean = false;
 
   constructor(
-    private translate: TranslateService) {}
-  navbarClasses: string =
-    'opacity-0 pointer-events-none bg-transparent text-white transition-opacity duration-500'; // Clases dinámicas del navbar
+    private translate: TranslateService,
+    private authService: ShopifyAuthService,
+    private shopifyService: ShopifyService
+  ) {}
 
+  ngOnInit() {
+    this.customer$ = this.authService.customer$;
+    this.checkout$ = this.shopifyService.checkout$;
+
+    // Suscribirse a los cambios del checkout
+    this.checkout$.subscribe(checkout => {
+      this.cartItemCount = checkout?.lineItems?.length || 0;
+    });
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    if (this.enableScrollEffect) {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      this.scrolled = scrollTop > 0;
-      this.fixed = this.scrolled;
-    } else {
-      this.scrolled = true;
-      this.fixed = false;
-    }
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    this.scrolled = scrollTop > 0;
+    this.fixed = this.scrolled;
   }
 
-  // Cambia el estado del menú desplegable
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
@@ -46,5 +61,9 @@ export class NavbarComponent {
   changeLanguage(lang: string) {
     this.translate.use(lang);
     this.languageChanged.emit(lang);
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

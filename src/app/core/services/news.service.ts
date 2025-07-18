@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
-import {NewsItem} from '../shared/models/NewItem.model';
+import {NewsItem} from '../../shared/models/NewItem.model';
 
 
 @Injectable({

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { map, Observable } from 'rxjs';
-import { TravelPackages } from '../shared/models/travel-packages.model';
+import { TravelPackages } from '../../shared/models/travel-packages.model';
 
 @Injectable({
   providedIn: 'root'

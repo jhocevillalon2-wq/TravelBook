@@ -1,7 +1,7 @@
 import {Component, Output, EventEmitter} from '@angular/core';
 import {NgForOf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {PhoneCodeService} from '../../../services/phone-code.service';
+import {PhoneCodeService} from '../../../core/services/phone-code.service';
 
 @Component({
   selector: 'app-phone-code-selector',

@@ -4,7 +4,7 @@ import {BannerComponent} from "../../../../shared/components/banner/banner.compo
 import {Observable} from 'rxjs';
 import {TravelPackages} from '../../../../shared/models/travel-packages.model';
 import {ActivatedRoute} from '@angular/router';
-import {PremiumTours} from '../../../../services/tours.service';
+import {PremiumTours} from '../../../../core/services/tours.service';
 
 @Component({
   selector: 'app-info-packages',
