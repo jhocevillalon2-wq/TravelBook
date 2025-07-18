@@ -1,8 +1,8 @@
-import {Component, EventEmitter, HostListener, Input, Output} from '@angular/core';
+import {Component, EventEmitter, HostListener, Input, Output, OnInit, OnDestroy} from '@angular/core';
 import {AsyncPipe, NgClass, NgIf} from '@angular/common';
 import {RouterLink} from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
-import {Observable, of} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import {ShopifyAuthService} from '../../../core/services/shopify-auth.service';
 import {ShopifyService} from '../../../core/services/shopify.service';
 
@@ -18,18 +18,22 @@ import {ShopifyService} from '../../../core/services/shopify.service';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
   @Output() languageChanged = new EventEmitter<string>();
-  @Input() enableScrollEffect: boolean = true; // Define si cambia de visibilidad al hacer scroll
+  @Input() enableScrollEffect: boolean = true;
 
-  customer$!: Observable<any>;
+  // Observables para el template
+  currentCustomer$!: Observable<any>;
+  isLoggedIn$!: Observable<boolean>;
   checkout$!: Observable<any>;
+
+  // Estados locales
   cartItemCount = 0;
-
-
   scrolled: boolean = false;
   menuOpen: boolean = false;
   fixed: boolean = false;
+
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private translate: TranslateService,
@@ -38,24 +42,38 @@ export class NavbarComponent {
   ) {}
 
   ngOnInit() {
-    this.customer$ = this.authService.customer$;
+    // Corregir los nombres de las propiedades
+    this.currentCustomer$ = this.authService.currentCustomer$;
+    this.isLoggedIn$ = this.authService.isLoggedIn$;
     this.checkout$ = this.shopifyService.checkout$;
 
     // Suscribirse a los cambios del checkout
-    this.checkout$.subscribe(checkout => {
+    const checkoutSub = this.checkout$.subscribe(checkout => {
       this.cartItemCount = checkout?.lineItems?.length || 0;
     });
+
+    this.subscriptions.push(checkoutSub);
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    this.scrolled = scrollTop > 0;
-    this.fixed = this.scrolled;
+    if (this.enableScrollEffect) {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      this.scrolled = scrollTop > 0;
+      this.fixed = this.scrolled;
+    }
   }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
   }
 
   changeLanguage(lang: string) {
@@ -65,5 +83,6 @@ export class NavbarComponent {
 
   logout() {
     this.authService.logout();
+    this.closeMenu(); // Cerrar menú después del logout
   }
 }

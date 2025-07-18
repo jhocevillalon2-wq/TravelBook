@@ -69,7 +69,8 @@
               "buildTarget": "InfinityLuxuryPeru:build:production"
             },
             "development": {
-              "buildTarget": "InfinityLuxuryPeru:build:development"
+              "buildTarget": "InfinityLuxuryPeru:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

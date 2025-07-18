@@ -88,7 +88,7 @@ export class CartComponent  implements OnInit,OnDestroy{
 
   // Continuar comprando
   continueShopping() {
-    this.router.navigate(['/productos']);
+    this.router.navigate(['/market/productos']);
   }
 
   // Limpiar carrito

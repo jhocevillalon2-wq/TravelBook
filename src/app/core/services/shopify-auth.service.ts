@@ -1,153 +1,297 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { BehaviorSubject } from 'rxjs';
-import Client from 'shopify-buy';
+import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject, Observable } from 'rxjs';
 import {StorageService} from './storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShopifyAuthService {
-  private client: any;
-  private customerSubject = new BehaviorSubject<any>(null);
-  public customer$ = this.customerSubject.asObservable();
-  private customerAccessToken: string | null = null;
   private isBrowser: boolean;
+  private adminApiUrl = 'https://47sdwk-gm.myshopify.com/admin/api/2024-07';
+  private adminToken = '7e75302ac4b28b2ea4298742cd2126fe';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,private storageService: StorageService) {
+  // Estado de autenticación
+  private isLoggedInSubject = new BehaviorSubject<boolean>(false);
+  private currentCustomerSubject = new BehaviorSubject<any>(null);
+
+  public isLoggedIn$ = this.isLoggedInSubject.asObservable();
+  public currentCustomer$ = this.currentCustomerSubject.asObservable();
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private http: HttpClient,
+    private storageService: StorageService
+  ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
-    this.client = Client.buildClient({
-      domain: '47sdwk-gm.myshopify.com',
-      storefrontAccessToken: '6c887bb0c25bc8dc47af37f79865d39e',
-      apiVersion: '2024-07'
-    });
-
-    // Solo verificar token si estamos en el navegador
     if (this.isBrowser) {
       this.checkStoredToken();
     }
   }
 
-  // Verificar token guardado en localStorage
-  private checkStoredToken() {
-    const token = this.storageService.getItem('customerAccessToken');
-    if (token) {
-      this.customerAccessToken = token;
-      this.fetchCustomerData();
+  // ========== MÉTODOS DE AUTENTICACIÓN ==========
+
+  // shopify-auth.service.ts
+  private customerAccountApiUrl = 'https://shopify.com/api/2024-07/customer/account';
+
+  async register(customerData: any) {
+    try {
+      const response = await this.http.post(`${this.customerAccountApiUrl}/register`, {
+        email: customerData.email,
+        firstName: customerData.firstName,
+        lastName: customerData.lastName,
+        phone: customerData.phone
+      }, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).toPromise();
+
+      return response;
+    } catch (error) {
+      throw error;
     }
   }
 
 
-  // Registro de nuevo cliente
-  async register(customerData: {
-    email: string;
-    password: string;
-    firstName: string;
-    lastName: string;
+  async login(email: string) {
+    try {
+      // Implementar envío de código por email
+      const response = await this.http.post('/api/customer/login', {
+        email: email
+      }).toPromise();
+
+      return { success: true, message: 'Código enviado a tu email' };
+    } catch (error) {
+      console.error('Error en login:', error);
+      throw error;
+    }
+  }
+
+  async verifyCode(email: string, code: string) {
+    try {
+      const response = await this.http.post('/api/customer/verify', {
+        email: email,
+        code: code
+      }).toPromise() as any;
+
+      if (response.success) {
+        this.setAuthData(response.token, response.customer);
+      }
+
+      return response;
+    } catch (error) {
+      console.error('Error verificando código:', error);
+      throw error;
+    }
+  }
+
+  // ========== GESTIÓN DE SESIÓN ==========
+
+  private checkStoredToken() {
+    const token = this.storageService.getItem('customerToken');
+    const customerData = this.storageService.getItem('customerData');
+
+    if (token && customerData) {
+      this.isLoggedInSubject.next(true);
+      this.currentCustomerSubject.next(JSON.parse(customerData));
+    }
+  }
+
+  private setAuthData(token: string, customer: any) {
+    if (this.isBrowser) {
+      this.storageService.setItem('customerToken', token);
+      this.storageService.setItem('customerData', JSON.stringify(customer));
+    }
+    this.isLoggedInSubject.next(true);
+    this.currentCustomerSubject.next(customer);
+  }
+
+  logout() {
+    if (this.isBrowser) {
+      this.storageService.removeItem('customerToken');
+      this.storageService.removeItem('customerData');
+    }
+    this.isLoggedInSubject.next(false);
+    this.currentCustomerSubject.next(null);
+  }
+
+  // ========== VERIFICACIÓN DE ESTADO ==========
+
+  isAuthenticated(): boolean {
+    return this.isLoggedInSubject.value;
+  }
+
+  getCurrentCustomer(): any {
+    return this.currentCustomerSubject.value;
+  }
+
+  getCustomerToken(): string | null {
+    return this.isBrowser ? this.storageService.getItem('customerToken') : null;
+  }
+
+  // ========== OBTENER DATOS DEL CLIENTE ==========
+
+  async getCustomerData(customerId: string) {
+    try {
+      const query = `
+        query getCustomer($id: ID!) {
+          customer(id: $id) {
+            id
+            email
+            firstName
+            lastName
+            phone
+            createdAt
+            updatedAt
+            addresses {
+              id
+              firstName
+              lastName
+              address1
+              address2
+              city
+              province
+              country
+              zip
+              phone
+            }
+            orders(first: 10) {
+              edges {
+                node {
+                  id
+                  orderNumber
+                  totalPrice
+                  createdAt
+                  fulfillmentStatus
+                }
+              }
+            }
+          }
+        }
+      `;
+
+      const response = await this.executeGraphQL(query, { id: customerId });
+      return response.data.customer;
+    } catch (error) {
+      console.error('Error obteniendo datos del cliente:', error);
+      throw error;
+    }
+  }
+
+  // ========== ACTUALIZAR DATOS DEL CLIENTE ==========
+
+  async updateCustomer(customerId: string, updateData: {
+    firstName?: string;
+    lastName?: string;
+    email?: string;
     phone?: string;
   }) {
     try {
-      const customer = await this.client.customer.create({
-        email: customerData.email,
-        password: customerData.password,
-        firstName: customerData.firstName,
-        lastName: customerData.lastName,
-        phone: customerData.phone || ''
+      const mutation = `
+        mutation customerUpdate($input: CustomerInput!) {
+          customerUpdate(input: $input) {
+            customer {
+              id
+              email
+              firstName
+              lastName
+              phone
+            }
+            customerUserErrors {
+              field
+              message
+            }
+          }
+        }
+      `;
+
+      const variables = {
+        input: {
+          id: customerId,
+          ...updateData
+        }
+      };
+
+      const response = await this.executeGraphQL(mutation, variables);
+
+      if (response.data.customerUpdate.customerUserErrors.length > 0) {
+        throw new Error(response.data.customerUpdate.customerUserErrors[0].message);
+      }
+
+      // Actualizar datos locales
+      const updatedCustomer = response.data.customerUpdate.customer;
+      this.setAuthData(this.getCustomerToken()!, updatedCustomer);
+
+      return {
+        success: true,
+        message: 'Datos actualizados exitosamente',
+        customer: updatedCustomer
+      };
+    } catch (error) {
+      console.error('Error actualizando cliente:', error);
+      throw error;
+    }
+  }
+
+  // ========== GESTIÓN DE DIRECCIONES ==========
+
+  async addCustomerAddress(customerId: string, address: {
+    firstName: string;
+    lastName: string;
+    address1: string;
+    address2?: string;
+    city: string;
+    province: string;
+    country: string;
+    zip: string;
+    phone?: string;
+  }) {
+    try {
+      const mutation = `
+        mutation customerAddressCreate($customerId: ID!, $address: MailingAddressInput!) {
+          customerAddressCreate(customerId: $customerId, address: $address) {
+            customerAddress {
+              id
+            }
+            customerUserErrors {
+              field
+              message
+            }
+          }
+        }
+      `;
+
+      const response = await this.executeGraphQL(mutation, {
+        customerId: customerId,
+        address: address
       });
 
-      if (customer.customerUserErrors && customer.customerUserErrors.length > 0) {
-        throw new Error(customer.customerUserErrors[0].message);
+      if (response.data.customerAddressCreate.customerUserErrors.length > 0) {
+        throw new Error(response.data.customerAddressCreate.customerUserErrors[0].message);
       }
 
-      return { success: true, message: 'Cuenta creada exitosamente' };
+      return { success: true, message: 'Dirección agregada exitosamente' };
     } catch (error) {
-      console.error('Error registering:', error);
+      console.error('Error agregando dirección:', error);
       throw error;
     }
   }
 
-  // Login del cliente
-// Login del cliente
-  async login(email: string, password: string) {
-    try {
-      const accessTokenResponse = await this.client.customer.createAccessToken({
-        email: email,
-        password: password
-      });
+  // ========== MÉTODO AUXILIAR PARA GRAPHQL ==========
 
-      if (accessTokenResponse.customerUserErrors && accessTokenResponse.customerUserErrors.length > 0) {
-        throw new Error(accessTokenResponse.customerUserErrors[0].message);
+  private async executeGraphQL(query: string, variables: any = {}) {
+    const response = await this.http.post(`${this.adminApiUrl}/graphql.json`, {
+      query: query,
+      variables: variables
+    }, {
+      headers: {
+        'X-Shopify-Access-Token': this.adminToken,
+        'Content-Type': 'application/json'
       }
+    }).toPromise() as any;
 
-      this.customerAccessToken = accessTokenResponse.customerAccessToken.accessToken;
-
-      // Verificar que el token existe antes de guardarlo
-      if (this.isBrowser && this.customerAccessToken) {
-        this.storageService.setItem('customerAccessToken', this.customerAccessToken);
-      }
-
-      await this.fetchCustomerData();
-      return { success: true, message: 'Login exitoso' };
-    } catch (error) {
-      console.error('Error logging in:', error);
-      throw error;
-    }
-  }
-
-  // Obtener datos del cliente
-  private async fetchCustomerData() {
-    if (!this.customerAccessToken) return;
-
-    try {
-      const customer = await this.client.customer.fetch(this.customerAccessToken);
-      this.customerSubject.next(customer);
-    } catch (error) {
-      console.error('Error fetching customer:', error);
-      this.logout();
-    }
-  }
-
-  // Logout
-  logout() {
-    this.customerAccessToken = null;
-    this.storageService.removeItem('customerAccessToken');
-    this.customerSubject.next(null);
-  }
-
-  // Verificar si está logueado
-  isLoggedIn(): boolean {
-    return !!this.customerAccessToken;
-  }
-
-  // Obtener cliente actual
-  getCurrentCustomer() {
-    return this.customerSubject.value;
-  }
-
-  // Obtener pedidos del cliente
-  async getCustomerOrders() {
-    if (!this.customerAccessToken) return [];
-
-    try {
-      const orders = await this.client.customer.fetchOrders(this.customerAccessToken);
-      return orders;
-    } catch (error) {
-      console.error('Error fetching orders:', error);
-      return [];
-    }
-  }
-
-  // Actualizar datos del cliente
-  async updateCustomer(customerData: any) {
-    if (!this.customerAccessToken) throw new Error('No hay sesión activa');
-
-    try {
-      const updatedCustomer = await this.client.customer.update(this.customerAccessToken, customerData);
-      this.customerSubject.next(updatedCustomer);
-      return updatedCustomer;
-    } catch (error) {
-      console.error('Error updating customer:', error);
-      throw error;
-    }
+    return response;
   }
 }

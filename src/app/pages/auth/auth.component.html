@@ -4,71 +4,147 @@
       {{ isLoginMode ? 'Iniciar Sesión' : 'Crear Cuenta' }}
     </h2>
 
-    <!-- Login Form -->
-    <form *ngIf="isLoginMode" [formGroup]="loginForm" (ngSubmit)="onLogin()" class="space-y-4">
+    <!-- Mensaje -->
+    <div *ngIf="message" [ngClass]="{
+        'text-green-600': messageType === 'success',
+        'text-red-500': messageType === 'error'
+      }"
+         class="text-center text-sm">
+      {{ message }}
+    </div>
+
+    <!-- Login Form CORREGIDO -->
+    <form *ngIf="isLoginMode && !showVerification" [formGroup]="loginForm" (ngSubmit)="onLogin()" class="space-y-4">
       <div>
         <input
           type="email"
           formControlName="email"
           placeholder="Email"
-          required
-          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
+          class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
         />
+        <small class="text-red-500" *ngIf="isFieldInvalid(loginForm, 'email')">
+          {{ getFieldError(loginForm, 'email') }}
+        </small>
       </div>
-      <div>
-        <input
-          type="password"
-          formControlName="password"
-          placeholder="Contraseña"
-          required
-          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
-        />
-      </div>
+
+      <!-- ✅ ELIMINAR TODO EL DIV DEL PASSWORD -->
+
       <button
         type="submit"
         [disabled]="loading || !loginForm.valid"
         class="w-full bg-[#FFA600] text-white font-semibold py-2 rounded-md hover:bg-[#e08d00] transition"
       >
-        {{ loading ? 'Iniciando...' : 'Iniciar Sesión' }}
+        {{ loading ? 'Enviando código...' : 'Enviar código de verificación' }}
+      </button>
+
+      <p class="text-sm text-gray-600 text-center">
+        Te enviaremos un código de 6 dígitos a tu email
+      </p>
+    </form>
+
+    <!-- Formulario de verificación de código -->
+    <form *ngIf="showVerification" [formGroup]="verifyForm" (ngSubmit)="onVerifyCode()" class="space-y-4">
+      <div>
+        <input
+          type="text"
+          formControlName="code"
+          placeholder="Código de 6 dígitos"
+          maxlength="6"
+          class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e] text-center text-lg tracking-widest"
+        />
+        <small class="text-red-500" *ngIf="isFieldInvalid(verifyForm, 'code')">
+          {{ getFieldError(verifyForm, 'code') }}
+        </small>
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="loading || !verifyForm.valid"
+        class="w-full bg-[#FFA600] text-white font-semibold py-2 rounded-md hover:bg-[#e08d00] transition"
+      >
+        {{ loading ? 'Verificando...' : 'Verificar código' }}
+      </button>
+
+      <button
+        type="button"
+        (click)="backToLogin()"
+        class="w-full text-[#644d9e] text-sm hover:underline"
+      >
+        ← Volver al login
       </button>
     </form>
 
     <!-- Register Form -->
-    <form *ngIf="!isLoginMode" [formGroup]="registerForm" (ngSubmit)="onRegister()" class="space-y-4">
-      <input
-        type="text"
-        formControlName="firstName"
-        placeholder="Nombre"
-        required
-        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
-      />
-      <input
-        type="text"
-        formControlName="lastName"
-        placeholder="Apellido"
-        required
-        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
-      />
-      <input
-        type="email"
-        formControlName="email"
-        placeholder="Email"
-        required
-        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
-      />
-      <input
-        type="password"
-        formControlName="password"
-        placeholder="Contraseña (mín. 6 caracteres)"
-        required
-        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
-      />
-      <input
-        type="tel"
-        formControlName="phone"
-        placeholder="Teléfono (opcional)"
-        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#644d9e]"
-      />
+    <form *ngIf="!isLoginMode" [formGroup]="registerForm" (ngSubmit)="onRegister()" class="space-y-3">
+      <div>
+        <input
+          type="text"
+          formControlName="firstName"
+          placeholder="Nombre"
+          class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#644d9e]"
+        />
+        <small class="text-red-500" *ngIf="isFieldInvalid(registerForm, 'firstName')">
+          {{ getFieldError(registerForm, 'firstName') }}
+        </small>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          formControlName="lastName"
+          placeholder="Apellido"
+          class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#644d9e]"
+        />
+        <small class="text-red-500" *ngIf="isFieldInvalid(registerForm, 'lastName')">
+          {{ getFieldError(registerForm, 'lastName') }}
+        </small>
+      </div>
+
+      <div>
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Email"
+          class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#644d9e]"
+        />
+        <small class="text-red-500" *ngIf="isFieldInvalid(registerForm, 'email')">
+          {{ getFieldError(registerForm, 'email') }}
+        </small>
+      </div>
+
+      <div>
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="Contraseña"
+          class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#644d9e]"
+        />
+        <small class="text-red-500" *ngIf="isFieldInvalid(registerForm, 'password')">
+          {{ getFieldError(registerForm, 'password') }}
+        </small>
+      </div>
+
+      <div>
+        <input
+          type="password"
+          formControlName="confirmPassword"
+          placeholder="Confirmar Contraseña"
+          class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#644d9e]"
+        />
+        <small class="text-red-500" *ngIf="registerForm.hasError('passwordMismatch')">
+          Las contraseñas no coinciden
+        </small>
+      </div>
+
+      <div>
+        <input
+          type="tel"
+          formControlName="phone"
+          placeholder="Teléfono (opcional)"
+          class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#644d9e]"
+        />
+      </div>
+
       <button
         type="submit"
         [disabled]="loading || !registerForm.valid"
@@ -78,16 +154,11 @@
       </button>
     </form>
 
-    <!-- Mensaje -->
-    <div *ngIf="message" class="text-center text-sm text-red-500">{{ message }}</div>
-
-    <!-- Toggle login/register -->
+    <!-- Toggle -->
     <p class="text-center text-sm text-gray-600">
       {{ isLoginMode ? '¿No tienes cuenta?' : '¿Ya tienes cuenta?' }}
-      <a (click)="toggleMode()" class="text-[#644d9e] font-semibold cursor-pointer hover:underline">
-        {{ isLoginMode ? 'Crear cuenta' : 'Iniciar sesión' }}
-      </a>
+      <a (click)="switchToRegister()" *ngIf="isLoginMode" class="text-[#644d9e] font-semibold cursor-pointer hover:underline">Crear cuenta</a>
+      <a (click)="switchToLogin()" *ngIf="!isLoginMode" class="text-[#644d9e] font-semibold cursor-pointer hover:underline">Iniciar sesión</a>
     </p>
   </div>
 </div>
-

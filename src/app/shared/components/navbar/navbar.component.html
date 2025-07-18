@@ -48,7 +48,7 @@
     </a>
 
     <!-- Usuario logueado o botón de login -->
-    <ng-container *ngIf="(customer$ | async) as customer; else loginButton">
+    <ng-container *ngIf="(currentCustomer$ | async) as customer; else loginButton">
       <div class="flex items-center gap-2 text-white">
         <i class="fa-solid fa-user"></i>
         <span class="text-sm">{{ customer.firstName || 'Usuario' }}</span>
@@ -92,7 +92,7 @@
     </a>
 
     <!-- Login / Logout -->
-    <ng-container *ngIf="(customer$ | async) as customer; else loginBtnMobile">
+    <ng-container *ngIf="(currentCustomer$ | async) as customer; else loginBtnMobile">
       <div class="text-black py-2 border-b border-gray-600 flex items-center justify-between">
     <span class="flex items-center gap-2">
       <i class="fa-solid fa-user"></i>

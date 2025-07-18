@@ -15,9 +15,10 @@ export const marketRoutes: Routes = [
     { path:'',redirectTo:'productos',pathMatch:'full'},
     { path: 'productos', component: MarketComponent },
   { path: 'productos/:id', component: ProductDetailComponent },
-  { path: 'cart', component: CartComponent },
   { path: 'auth', component: AuthComponent },
-  {
+    { path: 'cart', component: CartComponent, canActivate:[AuthGuard] },
+
+    {
     path: 'mi-cuenta',
     component: CustomerAccountComponent,
     canActivate: [AuthGuard],
